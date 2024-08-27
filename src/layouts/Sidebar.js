@@ -88,7 +88,7 @@ const Sidebar = () => {
               </Link>
             </NavItem>
           ))}
-          <Button
+          {/* <Button
             color="danger"
             tag="a"
             target="_blank"
@@ -96,7 +96,7 @@ const Sidebar = () => {
             href="https://www.wrappixel.com/templates/adminpro-react-redux-admin/?ref=33"
           >
             Upgrade To Pro
-          </Button>
+          </Button> */}
         </Nav>
       </div>
     </div>
