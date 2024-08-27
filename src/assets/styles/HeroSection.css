@@ -1,0 +1,30 @@
+.hero-section {
+    flex: 2;
+    width: 60%;
+    background-image: url('../images/bg/background-img1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+  
+.hero-title {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+  
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #ddd;
+    font-family: 'Montserrat', sans-serif;
+}
