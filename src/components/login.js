@@ -70,6 +70,7 @@ import React, { useState } from "react";
 import { auth } from "./firebase";
 import { toast } from "react-toastify";
 import BannerImg from '../assets/images/bg/background-img1.jpg';
+import { predict } from "../service/coral-disease-identification/CoralDisease";
 
 const inputClass = "w-full p-2 border border-border rounded-md";
 const buttonClass = "w-full bg-secondary text-secondary-foreground hover:bg-secondary/80 p-2 rounded-md";
@@ -80,9 +81,22 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+const handleImageChange = async (event) => {
+  const file = event.target.files[0];
+  if (file) {
+      try {
+          const response = await predict(file);
+          console.log('Successfully predicted:', response);
+      } catch (error) {
+          console.error('Failed to predict image:', error);
+      }
+  }
+};
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+    
+
       await signInWithEmailAndPassword(auth, email, password);
       console.log("User logged in Successfully");
       window.location.href = "/dashboard";
@@ -126,6 +140,10 @@ function Login() {
               Don't have an account? <a href="/register" className={linkClass}>Sign up</a>
             </p>
           </div>
+          <div>
+            <h1>Upload an Image</h1>
+            <input type="file" accept="image/*" onChange={handleImageChange} />
+        </div>
         </form>
       </div>
       <div className="hidden lg:block flex-1 bg-cover bg-center" style={{backgroundImage: BannerImg }}>
