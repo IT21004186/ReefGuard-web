@@ -6,7 +6,7 @@ function CoralIdentification() {
     <div className="coral-identification">
       <h2>Coral identification</h2>
       <p>
-        Upload an image of coral to quickly identify its species. Our advanced AI model is trained
+        Upload an image of coral to quickly identify its species. Our advanced model is trained
         to recognize various coral species with high accuracy, helping researchers, divers, and
         enthusiasts alike.
       </p>
