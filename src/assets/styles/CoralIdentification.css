@@ -1,0 +1,76 @@
+.coral-identification {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .upload-box {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .upload-area {
+    border: 2px dashed #ccc;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .upload-area p {
+    margin-bottom: 20px;
+    color: #777;
+  }
+  
+  .upload-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .upload-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .explore-coral-species {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+  
+  .coral-section {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .coral-section h3 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .coral-section p {
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .learn-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .learn-more-btn:hover {
+    background-color: #0056b3;
+  }
+  
