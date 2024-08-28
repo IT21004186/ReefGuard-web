@@ -15,12 +15,12 @@
     padding: 30px;
     border-radius: 10px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #fff;
   }
   
   .upload-area p {
     margin-bottom: 20px;
-    color: #777;
+    color: #494949;
   }
   
   .upload-btn {
