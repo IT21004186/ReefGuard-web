@@ -1,5 +1,5 @@
 import React from 'react';
-import './CoralIdentification.css';
+import '../../assets/styles/CoralIdentification.css';
 
 function CoralIdentification() {
   return (
