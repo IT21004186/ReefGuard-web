@@ -1,12 +1,21 @@
+.NAV{
+  height: 100vh !important;
+}
 .sidebarArea {
   flex-shrink: 0;
   width: $sidebarWidth;
   background-color: $sidebarColor;
+  height: $sidebarHeight;
+
+  .sidebarNav{
+    height: 100vh;
+  }
+   
   .nav-link {
     color: rgba(255, 255, 255, 0.5);
   }
   .sidenav-bg:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(63, 151, 111, 0.1);
     border-radius: $border-radius;
     .nav-link {
       color: white;
@@ -16,6 +25,7 @@
     background-color: $primary;
     border-radius: $border-radius;
     color: white;
+    
   }
 }
 

@@ -8,45 +8,45 @@ const navigation = [
     icon: "bi bi-speedometer2",
   },
   {
-    title: "Alert",
-    href: "/alerts",
+    title: "Sea Water Pollution",
+    href: "/PollutionPredictor",
     icon: "bi bi-bell",
   },
   {
-    title: "Badges",
-    href: "/badges",
+    title: "Coral Identification",
+    href: "/coralIdentification",
     icon: "bi bi-patch-check",
   },
   {
-    title: "Buttons",
-    href: "/buttons",
+    title: "Disease Identification",
+    href: "/diseaseIdentifier",
     icon: "bi bi-hdd-stack",
   },
   {
-    title: "Cards",
-    href: "/cards",
+    title: "Coral LifeExpectancy Prediction",
+    href: "/CoralLifeExpectancyPrediction",
     icon: "bi bi-card-text",
   },
-  {
-    title: "Grid",
-    href: "/grid",
-    icon: "bi bi-columns",
-  },
-  {
-    title: "Table",
-    href: "/table",
-    icon: "bi bi-layout-split",
-  },
-  {
-    title: "Forms",
-    href: "/forms",
-    icon: "bi bi-textarea-resize",
-  },
-  {
-    title: "Breadcrumbs",
-    href: "/breadcrumbs",
-    icon: "bi bi-link",
-  },
+  // {
+  //   title: "Grid",
+  //   href: "/grid",
+  //   icon: "bi bi-columns",
+  // },
+  // {
+  //   title: "Table",
+  //   href: "/table",
+  //   icon: "bi bi-layout-split",
+  // },
+  // {
+  //   title: "Forms",
+  //   href: "/forms",
+  //   icon: "bi bi-textarea-resize",
+  // },
+  // {
+  //   title: "Breadcrumbs",
+  //   href: "/breadcrumbs",
+  //   icon: "bi bi-link",
+  // },
   {
     title: "About",
     href: "/about",
@@ -72,7 +72,7 @@ const Sidebar = () => {
         </Button>
       </div>
       <div className="p-3 mt-2">
-        <Nav vertical className="sidebarNav">
+        <Nav vertical className="sidebarNav" style={{height: '86vh'}}>
           {navigation.map((navi, index) => (
             <NavItem key={index} className="sidenav-bg">
               <Link

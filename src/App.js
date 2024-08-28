@@ -25,6 +25,9 @@ import Login from "./components/login";
 import SignUp from "./components/register";
 import Profile from "./components/profile/profile";
 import DiseaseIdentifier from "./components/disease-identification/diseaseIdentifier";
+import CoralIdentification from "./components/coral-identification/coralIdentification";
+import PollutionPredictor from "./components/seaWater-pollution/seawaterpollutionIdentifier";
+import CoralLifeExpectancyPrediction from "./components/coral-lifeExpectancy/coralLifeExpectancyPrediction";
 import FullLayout from "./layouts/FullLayout";
 // import About from "./views/About";
 import Alerts from "./views/ui/Alerts";
@@ -63,6 +66,9 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/diseaseIdentifier" element={<DiseaseIdentifier />} />
               {/* <Route path="/about" element={<About />} /> */}
+              <Route path="/coralIdentification" element={<CoralIdentification />} />
+              <Route path="/seawaterpollutionidentifier" element={<PollutionPredictor />} />
+              <Route path="/coralLifeExpectancyPrediction" element={<CoralLifeExpectancyPrediction />} />
               <Route path="/alerts" element={<Alerts />} />
               <Route path="/badges" element={<Badges />} />
               <Route path="/buttons" element={<Buttons />} />
