@@ -24,6 +24,7 @@ import {
 import Login from "./components/login";
 import SignUp from "./components/register";
 import Profile from "./components/profile/profile";
+import DiseaseIdentifier from "./components/disease-identification/diseaseIdentifier";
 import FullLayout from "./layouts/FullLayout";
 // import About from "./views/About";
 import Alerts from "./views/ui/Alerts";
@@ -60,6 +61,7 @@ function App() {
               <Route path="/register" element={<SignUp />} />
               <Route path="/dashboard" element={<FullLayout />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/diseaseIdentifier" element={<DiseaseIdentifier />} />
               {/* <Route path="/about" element={<About />} /> */}
               <Route path="/alerts" element={<Alerts />} />
               <Route path="/badges" element={<Badges />} />
