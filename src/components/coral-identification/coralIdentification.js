@@ -18,13 +18,14 @@ function CoralIdentification() {
         </p>
         <div className="upload-box">
           <div className="upload-area">
-            <p>
+            <p style={{color:'GrayText'}}> 
               Drag and drop or click to upload your coral image. Our system will analyze it and
-              {/* provide you with detailed information about the coral species.<input type='file' accept="image/*" className="upload-box"></input> */}
+              provide you with detailed information about the coral species.<input type='file' accept="image/*" className="upload-box"></input>
             </p>
-            <button className="upload-btn">Identify Coral</button>
+           
           </div>
         </div>
+        <button className="upload-btn">Identify Coral</button>
         <ExploreCoralSpecies />
       </div>
     </div>
@@ -38,7 +39,7 @@ function ExploreCoralSpecies() {
       title: 'Discover New Species',
       description:
         'Explore and learn about the vast diversity of coral species from around the world. Our database is continuously updated to include newly discovered species.',
-      link: '#',
+      link: '/newSpeciesPage',
     },
     {
       title: 'Understand Coral Ecosystems',
