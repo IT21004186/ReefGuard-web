@@ -2,7 +2,7 @@ import React from "react";
 
 function CoralLifeExpectancyPrediction(){
   return (
-    <div>Coral Life</div>
+    <div>Coral Life Expectancy Predictor</div>
   );
 }
 

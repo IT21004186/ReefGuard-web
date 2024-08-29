@@ -20,6 +20,9 @@ const Forms = lazy(() => import("../views/ui/Forms"));
 const Breadcrumbs = lazy(() => import("../views/ui/Breadcrumbs"));
 const Profile = lazy(() => import("../components/profile/profile.js"));
 const DiseaseIdentifier = lazy(() => import("../components/disease-identification/diseaseIdentifier.js"));
+const CoralIdentification = lazy(() => import("../components/coral-identification/coralIdentification.js"));
+const PollutionPredictor = lazy(() => import("../components/seaWater-pollution/seawaterpollutionIdentifier.js"));
+const CoralLifeExpectancyPrediction = lazy(() => import("../components/coral-lifeExpectancy/coralLifeExpectancyPrediction.js"));
 
 /*****Routes******/
 
@@ -38,7 +41,10 @@ const ThemeRoutes = [
     children: [
       { path: "starter", exact: true, element: <Starter /> },
       { path: "profile", exact: true, element: <Profile /> },
+      { path: "seawaterpollutionidentifier", exact: true, element: <PollutionPredictor /> },
+      { path: "coralIdentification", exact: true, element: <CoralIdentification /> },
       { path: "diseaseIdentifier", exact: true, element: <DiseaseIdentifier /> },
+      { path: "coralLifeExpectancyPrediction", exact: true, element: <CoralLifeExpectancyPrediction /> },
       { path: "about", exact: true, element: <About /> },
       { path: "alerts", exact: true, element: <Alerts /> },
       { path: "badges", exact: true, element: <Badges /> },

@@ -11,7 +11,7 @@ const navigation = [
   },
   {
     title: "Sea Water Pollution",
-    href: "/PollutionPredictor",
+    href: "/seawaterpollutionidentifier",
     icon: "bi bi-bell",
   },
   {
@@ -25,7 +25,7 @@ const navigation = [
     icon: "bi bi-hdd-stack",
   },
   {
-    title: "Coral LifeExpectancy Prediction",
+    title: "LifeExpectancy Level",
     href: "/CoralLifeExpectancyPrediction",
     icon: "bi bi-card-text",
   },
