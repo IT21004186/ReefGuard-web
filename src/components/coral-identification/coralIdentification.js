@@ -20,7 +20,7 @@ function CoralIdentification() {
           <div className="upload-area">
             <p>
               Drag and drop or click to upload your coral image. Our system will analyze it and
-              provide you with detailed information about the coral species.
+              provide you with detailed information about the coral species.<input type='file' accept="image/*" className="upload-box"></input>
             </p>
             <button className="upload-btn">Identify Coral</button>
           </div>
