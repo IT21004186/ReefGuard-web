@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./firebase";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import '../assets/styles/Login.css';
 import AppLogo from '../assets/images/logos/app-logo2.png';
@@ -8,13 +10,14 @@ import AppLogo from '../assets/images/logos/app-logo2.png';
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
       console.log("User logged in Successfully");
-      window.location.href = "/dashboard";
+      navigate("/starter");
       toast.success("User logged in Successfully", {
         position: "top-center",
       });
@@ -50,7 +53,7 @@ const LoginForm = () => {
           SIGN IN
         </button>
         <p className="text-muted text-right" style={{ color: "white" }}>
-          Don't have an account? <a href="/register">Sign up</a>
+          Don't have an account? <Link to="/register">Sign up</Link>
         </p>
       </form>
     </div>
