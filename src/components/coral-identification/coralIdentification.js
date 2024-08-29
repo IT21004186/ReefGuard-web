@@ -1,14 +1,8 @@
 import React from 'react';
 import '../../assets/styles/CoralIdentification.css';
-import Sidebar from "../../layouts/Sidebar";
-import Header from "../../layouts/Header";
 
 function CoralIdentification() {
   return (
-    <div className="coral-identification-page">
-      <Header />
-    <div className="coral-identification-container">
-      <Sidebar /> {/* Sidebar is placed here to the left */}
       <div className="coral-identification">
         <h2>Coral identification</h2>
         <p>
@@ -27,8 +21,6 @@ function CoralIdentification() {
         </div>
         <ExploreCoralSpecies />
       </div>
-    </div>
-    </div>
   );
 }
 
