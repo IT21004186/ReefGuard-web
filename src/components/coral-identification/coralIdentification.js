@@ -1,25 +1,33 @@
 import React from 'react';
 import '../../assets/styles/CoralIdentification.css';
+import Sidebar from "../../layouts/Sidebar";
+import Header from "../../layouts/Header";
 
 function CoralIdentification() {
   return (
-    <div className="coral-identification">
-      <h2>Coral identification</h2>
-      <p>
-        Upload an image of coral to quickly identify its species. Our advanced model is trained
-        to recognize various coral species with high accuracy, helping researchers, divers, and
-        enthusiasts alike.
-      </p>
-      <div className="upload-box">
-        <div className="upload-area">
-          <p>
-            Drag and drop or click to upload your coral image. Our system will analyze it and
-            provide you with detailed information about the coral species.
-          </p>
-          <button className="upload-btn">Identify Coral</button>
+    <div className="coral-identification-page">
+      <Header />
+    <div className="coral-identification-container">
+      <Sidebar /> {/* Sidebar is placed here to the left */}
+      <div className="coral-identification">
+        <h2>Coral identification</h2>
+        <p>
+          Upload an image of coral to quickly identify its species. Our advanced model is trained
+          to recognize various coral species with high accuracy, helping researchers, divers, and
+          enthusiasts alike.
+        </p>
+        <div className="upload-box">
+          <div className="upload-area">
+            <p>
+              Drag and drop or click to upload your coral image. Our system will analyze it and
+              {/* provide you with detailed information about the coral species.<input type='file' accept="image/*" className="upload-box"></input> */}
+            </p>
+            <button className="upload-btn">Identify Coral</button>
+          </div>
         </div>
+        <ExploreCoralSpecies />
       </div>
-      <ExploreCoralSpecies />
+    </div>
     </div>
   );
 }
