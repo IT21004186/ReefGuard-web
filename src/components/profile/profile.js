@@ -1,23 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { auth, db } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
+import "../../assets/styles/Profile.css"; // Import the CSS file
 
 function Profile() {
   const [userDetails, setUserDetails] = useState(null);
+
   const fetchUserData = async () => {
     auth.onAuthStateChanged(async (user) => {
-      console.log(user);
-
-      const docRef = doc(db, "Users", user.uid);
-      const docSnap = await getDoc(docRef);
-      if (docSnap.exists()) {
-        setUserDetails(docSnap.data());
-        console.log(docSnap.data());
+      if (user) {
+        const docRef = doc(db, "Users", user.uid);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          setUserDetails(docSnap.data());
+        } else {
+          console.log("User data not found");
+        }
       } else {
         console.log("User is not logged in");
       }
     });
   };
+
   useEffect(() => {
     fetchUserData();
   }, []);
@@ -26,30 +30,28 @@ function Profile() {
     try {
       await auth.signOut();
       window.location.href = "/login";
-      console.log("User logged out successfully!");
     } catch (error) {
       console.error("Error logging out:", error.message);
     }
   }
+
   return (
-    <div>
+    <div className="profile-container">
       {userDetails ? (
         <>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div className="profile-header">
             <img
               src={userDetails.photo}
               alt="Profile"
-              width={"40%"}
-              style={{ borderRadius: "50%" }}
+              className="profile-image"
             />
+            <h3 className="profile-welcome">Welcome {userDetails.firstName} 🙏</h3>
           </div>
-          <h3>Welcome {userDetails.firstName} 🙏🙏</h3>
-          <div>
+          <div className="profile-details">
             <p>Email: {userDetails.email}</p>
             <p>First Name: {userDetails.firstName}</p>
-            {/* <p>Last Name: {userDetails.lastName}</p> */}
           </div>
-          <button className="btn btn-primary" onClick={handleLogout}>
+          <button className="btn btn-primary logout-button" onClick={handleLogout}>
             Logout
           </button>
         </>
@@ -59,4 +61,5 @@ function Profile() {
     </div>
   );
 }
+
 export default Profile;
