@@ -11,7 +11,7 @@ const navigation = [
   },
   {
     title: "Sea Water Pollution",
-    href: "/PollutionPredictor",
+    href: "/seawaterpollutionidentifier",
     icon: "bi bi-bell",
   },
   {
@@ -25,7 +25,7 @@ const navigation = [
     icon: "bi bi-hdd-stack",
   },
   {
-    title: "Coral LifeExpectancy Prediction",
+    title: "LifeExpectancy Level",
     href: "/CoralLifeExpectancyPrediction",
     icon: "bi bi-card-text",
   },
@@ -90,15 +90,6 @@ const Sidebar = () => {
               </Link>
             </NavItem>
           ))}
-          {/* <Button
-            color="danger"
-            tag="a"
-            target="_blank"
-            className="mt-3"
-            href="https://www.wrappixel.com/templates/adminpro-react-redux-admin/?ref=33"
-          >
-            Upgrade To Pro
-          </Button> */}
         </Nav>
       </div>
     </div>
