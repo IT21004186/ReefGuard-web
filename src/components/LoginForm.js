@@ -43,24 +43,6 @@ const handleSubmit = async (e) => {
     });
   }
 };
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const auth =await signInWithEmailAndPassword(auth, email, password);
-
-  //     localStorage.setItem("uid",auth?.user.uid)
-  //     console.log("User logged in Successfully");
-  //     navigate("/starter");
-  //     toast.success("User logged in Successfully", {
-  //       position: "top-center",
-  //     });
-  //   } catch (error) {
-  //     console.log(error.message);
-  //     toast.error(error.message, {
-  //       position: "bottom-center",
-  //     });
-  //   }
-  // };
 
   return (
     <div className="login-form-container">
