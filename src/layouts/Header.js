@@ -4,9 +4,9 @@ import {
   Navbar,
   Collapse,
   Nav,
-  NavItem,
+  // NavItem,
   NavbarBrand,
-  UncontrolledDropdown,
+  // UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
@@ -63,17 +63,17 @@ const Header = () => {
 
       <Collapse navbar isOpen={isOpen}>
         <Nav className="me-auto" navbar>
-          <NavItem>
+          {/* <NavItem>
             <Link to="/starter" className="nav-link">
               Starter
             </Link>
-          </NavItem>
-          <NavItem>
+          </NavItem> */}
+          {/* <NavItem>
             <Link to="/about" className="nav-link">
               About
             </Link>
-          </NavItem>
-          <UncontrolledDropdown inNavbar nav>
+          </NavItem> */}
+          {/* <UncontrolledDropdown inNavbar nav>
             <DropdownToggle caret nav>
               DD Menu
             </DropdownToggle>
@@ -83,7 +83,7 @@ const Header = () => {
               <DropdownItem divider />
               <DropdownItem>Reset</DropdownItem>
             </DropdownMenu>
-          </UncontrolledDropdown>
+          </UncontrolledDropdown> */}
         </Nav>
         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
           <DropdownToggle color="transparent">
