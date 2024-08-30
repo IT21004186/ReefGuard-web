@@ -12,6 +12,7 @@ const Profile = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+
     const fetchUserData = async () => {
       auth.onAuthStateChanged(async (user) => {
         if (user) {
