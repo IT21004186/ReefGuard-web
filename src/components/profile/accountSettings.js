@@ -5,20 +5,22 @@ import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import '../../assets/styles/userProfile/AccountSettings.css';
 
 const AccountSettings = ({ userDetails, setUserDetails }) => {
+  const [uid, setUid] = useState(localStorage.getItem("uid") || '');
   const [firstName, setFirstName] = useState(userDetails?.firstName || '');
   const [lastName, setLastName] = useState(userDetails?.lastName || '');
   const [email, setEmail] = useState(userDetails?.email || '');
   const [uploading, setUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [uploadCompleted, setUploadCompleted] = useState(false);
-
+ 
   useEffect(() => {
+
     setFirstName(userDetails?.firstName || '');
     setLastName(userDetails?.lastName || '');
     setEmail(userDetails?.email || '');
   }, [userDetails]);
 
-const handleImageChange = (e) => {
+  const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
       const storageRef = ref(storage, `profileImages/${auth.currentUser.uid}/${file.name}`);
@@ -41,7 +43,7 @@ const handleImageChange = (e) => {
         async () => {
           const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
           try {
-            const userRef = doc(db, 'Users', auth.currentUser.uid);
+            const userRef = doc(db, 'Users', uid);
             await setDoc(userRef, { photo: downloadURL }, { merge: true });
             setUserDetails((prevDetails) => ({ ...prevDetails, photo: downloadURL }));
             setUploading(false);
@@ -57,7 +59,7 @@ const handleImageChange = (e) => {
 
   const handleUpdate = async () => {
     try {
-      const userRef = doc(db, 'Users', auth.currentUser.uid);
+      const userRef = doc(db, 'Users', uid);
       const updatedData = { firstName, lastName, email};
       await setDoc(userRef, updatedData, { merge: true });
       setUserDetails(updatedData);

@@ -12,22 +12,37 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-      console.log("User logged in Successfully");
-      navigate("/starter");
-      toast.success("User logged in Successfully", {
-        position: "top-center",
-      });
-    } catch (error) {
-      console.log(error.message);
-      toast.error(error.message, {
-        position: "bottom-center",
-      });
-    }
-  };
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+
+    // Store user ID in localStorage
+    localStorage.setItem("uid", user.uid);
+
+    // Log success message
+    console.log("User logged in Successfully");
+
+    // Navigate to the desired route
+    navigate("/starter");
+
+    // Show success toast notification
+    toast.success("User logged in Successfully", {
+      position: "top-center",
+    });
+  } catch (error) {
+    // Log the error message
+    console.log(error.message);
+
+    // Show error toast notification
+    toast.error("Failed to login: " + error.message, {
+      position: "bottom-center",
+    });
+  }
+};
 
   return (
     <div className="login-form-container">
