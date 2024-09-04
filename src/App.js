@@ -5,8 +5,6 @@ import Themeroutes from "./routes/Router";
 import Login from "./components/login";
 import Register from "./components/register";
 
-import CoralLifeExpectancyPrediction from "./components/coral-lifeExpectancy/coralLifeExpectancyPrediction";
-import MoreFacts from "./components/coral-lifeExpectancy/MoreFacts";
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -24,8 +22,6 @@ const App = () => {
     { path: "/login", element: user ? <Navigate to="/starter" /> : <Login /> },
     { path: "/register", element: user ? <Navigate to="/starter" /> : <Register /> },
 
-    { path: "/corallifeexpectancy", element: <CoralLifeExpectancyPrediction /> }, // Route for CoralLifeExpectancyPrediction
-    { path: "/morefacts", element: <MoreFacts /> }, // Route for MoreFacts
 
     ...Themeroutes
   ]);

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Box, Grid, Typography, TextField, Button } from '@mui/material';
 import ImageSlider from './ImageSlider';
 import { grey } from '@mui/material/colors';
@@ -11,6 +12,8 @@ function CoralLifeExpectancyPrediction() {
     const [month, setMonth] = useState('');
     const [day, setDay] = useState('');
     const [predicted, setPredicted] = useState('');
+
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -69,6 +72,7 @@ function CoralLifeExpectancyPrediction() {
                             description="In Sri Lanka, an island nation in the Indian Ocean, there are many varieties of coral reefs that are vital to the marine environment"
                             linktoNext="Facts"
                             button="More Facts"
+                            onClick={() => navigate("/facts")}
                         />
                     </Grid>
 
@@ -82,6 +86,7 @@ function CoralLifeExpectancyPrediction() {
                             justifyContent: 'center',
                             padding: 2,
                             maxWidth: "300px",
+                            
                         }}
                     >
                         <ImageCard title="What is Coral bleaching?" linktoNext="CoralBleaching" />
@@ -109,12 +114,12 @@ function CoralLifeExpectancyPrediction() {
                 </Grid>
 
                 {/* Second grid with typography */}
-                <Grid container spacing={3} sx={{ my: 5, width: "94%", mx: "3%" }}>
+                <Grid container spacing={3} sx={{ my: 0.1, width: "90%", mx: "1%" }}>
                     <Grid item xs={12} sm={6} sx={{ backgroundColor: "black", padding: 2 }}>
                         <Typography
                             sx={{
                                 fontWeight: 'bold',
-                                fontSize: '2.5rem',
+                                fontSize: '2rem',
                                 color: "white",
                                 mt: 10,
                                 display: 'flex',
@@ -122,12 +127,14 @@ function CoralLifeExpectancyPrediction() {
                         >
                             Please Enter the date to check the
                         </Typography>
-                        <Typography sx={{ fontWeight: 'bold', fontSize: '2.5rem', color: "white" }}>
+                        <Typography sx={{fontWeight: 'bold', fontSize: '2rem', color: "white" }}>
                             "Coral Health"
                         </Typography>
                     </Grid>
 
                     <Grid item xs={12} sm={6} sx={{ backgroundColor: grey[300] }}>
+
+
                         <Box component="form" noValidate autoComplete="off" onSubmit={handleSubmit}>
                             <Grid container spacing={2} alignItems="center">
                                 <Grid item xs={4}>
@@ -243,9 +250,11 @@ function CoralLifeExpectancyPrediction() {
                                 )}
                             </Grid>
                         </Box>
+
+
                     </Grid>
                 </Grid>
-                <Grid container spacing={5} sx={{ my: 5, width: "94%", mx: "3%" }}>
+                <Grid container spacing={5} sx={{ my: 5, width: "90%", mx: "1%" }}>
                     <AllCoral />
                 </Grid>
             </Box>

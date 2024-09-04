@@ -12,11 +12,11 @@ const ImageCard = ({ title, linktoNext }) => {
       marginBottom: 5,
       display: 'flex',
       flexDirection: 'column',
-      height: '91%'
+      height: '80%'
     }}>
       <CardMedia sx={{ objectFit: 'cover', height: '100%', width: '100%' }} image={Coral}>
         <CardContent sx={{ flexGrow: 1, marginBottom: "20%" }}>
-          <Typography sx={{ fontWeight: 'bold', fontSize: '2.1rem', color: 'white', marginTop: '40%' }}>
+          <Typography sx={{ fontWeight: 'bold', fontSize: '2.1rem', color: 'white', marginTop: '4%' }}>
             {title}
           </Typography>
         </CardContent>

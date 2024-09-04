@@ -1,8 +1,8 @@
 import React from 'react'
 import { Box, Container, Typography, Grid } from '@mui/material'
-import Madrepora from "../Images/Madrepora.jpg"
-import polymastia from "../Images/polymastia.jpg"
-import newImage from "../Images/3.jpg"
+import Madrepora from "./Images/Madrepora.jpg"
+import polymastia from "./Images/polymastia.jpg"
+import newImage from "./Images/3.jpg"
 
 function Facts() {
     return (

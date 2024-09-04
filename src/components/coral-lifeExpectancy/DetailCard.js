@@ -9,7 +9,7 @@ const DetailCard = ({ title, description , linktoNext , button}) => {
             marginBottom: 5, 
             display: 'flex', 
             flexDirection: 'column', 
-            height: '91%' 
+            height: '80%' 
         }}>
             <CardContent sx={{ flexGrow: 1 }}>
                 <Divider sx={{ 
@@ -18,7 +18,7 @@ const DetailCard = ({ title, description , linktoNext , button}) => {
                     marginBottom: 5, 
                     marginTop: 5 
                 }} />
-                <Typography sx={{ fontWeight: 'bold', fontSize: '1.5rem' }}>
+                <Typography sx={{ fontWeight: 'bold', fontSize: '1.2rem' }}>
                     {description}
                 </Typography>
             </CardContent>

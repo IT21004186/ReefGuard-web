@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { Box, Container, Typography, Grid, TextField, Button, Input } from '@mui/material'
 import { blue, red } from '@mui/material/colors'
-import Image1 from "../Images/coral4.jpg"
+import Image1 from "./Images/coral4.jpg"
 import { auto, left } from '@popperjs/core'
 
 function HealthForm() {
