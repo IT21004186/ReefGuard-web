@@ -1,8 +1,15 @@
 import React from "react";
-import { Card, CardContent, Divider, Typography , CardActions , Button} from "@mui/material";
+import { Card, CardContent, Divider, Typography, CardActions, Button } from "@mui/material";
 import { grey } from "@mui/material/colors";
+import { useNavigate } from "react-router-dom";
 
-const DetailCard = ({ title, description , linktoNext , button}) => {
+const DetailCard = ({ title, description, linktoNext, button }) => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(linktoNext);
+    };
+
     return (
         <Card sx={{ 
             backgroundColor: grey[300], 
@@ -27,12 +34,13 @@ const DetailCard = ({ title, description , linktoNext , button}) => {
                 marginBottom: 1 ,
                 justifyContent:"center"
             }}>
-                <a 
-            href={linktoNext} 
-            style={{ textDecoration: 'none' }}
-          >
-            <Button size="small" sx={{ color: 'black' }}>{button}</Button>
-          </a>
+                <Button 
+                    size="small" 
+                    sx={{ color: 'black' }} 
+                    onClick={handleClick}
+                >
+                    {button}
+                </Button>
             </CardActions>
         </Card>
     );

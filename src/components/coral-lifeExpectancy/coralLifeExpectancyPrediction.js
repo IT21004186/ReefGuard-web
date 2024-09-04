@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { Box, Grid, Typography, TextField, Button } from '@mui/material';
 import ImageSlider from './ImageSlider';
 import { grey } from '@mui/material/colors';
 import AllCoral from './AllCoral';
-import DetailCard from './DetailCard.js';
+import DetailCard from './DetailCard';
 import ImageCard from './ImageCard';
 
 function CoralLifeExpectancyPrediction() {
@@ -70,7 +71,7 @@ function CoralLifeExpectancyPrediction() {
                         <DetailCard
                             title="Card 1"
                             description="In Sri Lanka, an island nation in the Indian Ocean, there are many varieties of coral reefs that are vital to the marine environment"
-                            linktoNext="Facts"
+                            linktoNext="/facts"
                             button="More Facts"
                             onClick={() => navigate("/facts")}
                         />

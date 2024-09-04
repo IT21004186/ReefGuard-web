@@ -56,7 +56,6 @@ const ThemeRoutes = [
       { path: "table", exact: true, element: <Tables /> },
       { path: "forms", exact: true, element: <Forms /> },
       { path: "breadcrumbs", exact: true, element: <Breadcrumbs /> },
-    
       { path: "/", element: <Navigate to="/starter" /> },
 
 
