@@ -50,7 +50,7 @@ function CoralLifeExpectancyPrediction() {
 
                 <ImageSlider />
 
-                <Grid container spacing={0} sx={{ mt: 5, width: "90%", mx: "3%" }}>
+                <Grid container spacing={0} sx={{ mt: 3, width: "90%", mx: "0.1%" }}>
 
                     {/* First card */}
                     <Grid

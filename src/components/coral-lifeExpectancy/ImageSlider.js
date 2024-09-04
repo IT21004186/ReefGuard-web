@@ -9,12 +9,7 @@ import Image3 from "./Images/coral6.jpg";
 import Image4 from "./Images/coral8.jpg";
 
 
-const images = [
-    Image1,
-    Image2,
-    Image3,
-    Image4
-];
+const images = [Image1,Image2,Image3,Image4];
 
 const ImageSlider = () => {
     const settings = {
@@ -30,12 +25,12 @@ const ImageSlider = () => {
         <div>
             <Slider {...settings}>
                 {images.map((url, index) => (
-                    <Box key={index} sx={{ position: 'relative', width: '91%', height: '100%' }}>
+                    <Box key={index} sx={{ position: 'relative', width: '91%', height: '90%' }}>
                         <Box
                             component="img"
                             src={url}
                             alt={`Carousel Image ${index + 1}`}
-                            sx={{ width: '91%', height: '400px', objectFit: 'cover' , marginBottom : "5%"}}
+                            sx={{ width: '90%', height: '350px', objectFit: 'cover' , marginBottom : "1%"}}
                         />
                     </Box>
                 ))}
