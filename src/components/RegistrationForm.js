@@ -81,7 +81,7 @@ const RegisterForm = () => {
           </button>
         </div>
         <p className="forgot-password text-right">
-          Already registered <Link to="/login">Login</Link>
+          Already registered? <Link to="/login"> Login</Link>
         </p>
       </form>
     </div>

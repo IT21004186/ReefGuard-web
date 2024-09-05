@@ -63,7 +63,7 @@ const Sidebar = () => {
   let location = useLocation();
 
   return (
-    <div className="bg-dark">
+    <div>
       <div className="d-flex">
         <Button
           color="white"
