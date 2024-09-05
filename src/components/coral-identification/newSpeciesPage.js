@@ -1,6 +1,6 @@
 import React from "react";
 import "../../assets/styles/../styles/newSpeciesPage.css"; // Update the CSS file reference
-import cauliflowerCoralImage from "../../assets/images/corals/CauliflowerCoral_cover.jpg";
+import cauliflowerCoralImage from "../../assets/images/corals/overview.jpg";
 import cauliflowerCoralImage2 from "../../assets/images/corals/cauliflower-coral-1.jpg";
 import cauliflowerCoralImage3 from "../../assets/images/corals/pocillopora-coral-close-up.jpg";
 import cauliflowerCoralImage4 from "../../assets/images/corals/pocillopora-coral-gallery-2.jpg";
