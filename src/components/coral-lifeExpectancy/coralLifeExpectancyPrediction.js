@@ -12,12 +12,14 @@ function CoralLifeExpectancyPrediction() {
     const [year, setYear] = useState('');
     const [month, setMonth] = useState('');
     const [day, setDay] = useState('');
-    const [predicted, setPredicted] = useState('');
+    const [predicted, setPredicted] = useState('');  // Initialize with empty string instead of 'N/A'
 
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+
 
         try {
             const response = await fetch('https://coral-precent-fxf2bbhwbyhmd8h2.eastus-01.azurewebsites.net/predict', {
@@ -34,8 +36,10 @@ function CoralLifeExpectancyPrediction() {
 
             if (response.ok) {
                 const data = await response.json();
+                console.log("Hello");
                 console.log(data);
-                setPredicted(data.predicted ? data.predicted.toFixed(2) : 'N/A');  
+                // Ensure the data is in the expected format
+                setPredicted(data.data.predicted ? data.data.predicted.toFixed(2) : 'N/A');  // Use predicted from the data and format it
             } else {
                 console.error('Failed to fetch coral health data.');
                 setPredicted('Error fetching data');
@@ -45,6 +49,33 @@ function CoralLifeExpectancyPrediction() {
             setPredicted('Error fetching data');
         }
     };
+
+    //     try {
+    //         const response = await fetch('https://coral-precent-fxf2bbhwbyhmd8h2.eastus-01.azurewebsites.net/predict', {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify({
+    //                 YYYY: parseInt(year),
+    //                 MM: parseInt(month),
+    //                 DD: parseInt(day),
+    //             }),
+    //         });
+
+    //         if (response.ok) {
+    //             const data = await response.json();
+    //             console.log(data);
+    //             setPredicted(data.predicted ? data.predicted.toFixed(2) : 'N/A');  
+    //         } else {
+    //             console.error('Failed to fetch coral health data.');
+    //             setPredicted('Error fetching data');
+    //         }
+    //     } catch (error) {
+    //         console.error('Error:', error);
+    //         setPredicted('Error fetching data');
+    //     }
+    // };
 
 
 
@@ -87,7 +118,7 @@ function CoralLifeExpectancyPrediction() {
                             justifyContent: 'center',
                             padding: 2,
                             maxWidth: "300px",
-                            
+
                         }}
                     >
                         <ImageCard title="What is Coral bleaching?" linktoNext="CoralBleaching" />
@@ -130,7 +161,7 @@ function CoralLifeExpectancyPrediction() {
                         >
                             Please Enter the date to check the
                         </Typography>
-                        <Typography sx={{fontWeight: 'bold', fontSize: '2rem', color: "white" }}>
+                        <Typography sx={{ fontWeight: 'bold', fontSize: '2rem', color: "white" }}>
                             "Coral Health"
                         </Typography>
                     </Grid>
