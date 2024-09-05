@@ -1,7 +1,7 @@
 import React from 'react'
 import Image1 from '../Images/coral5.jpg'
 import { Box, Grid, Typography  } from '@mui/material'
-import HealthForm from '../Component/HealthForm'
+import HealthForm from '../HealthForm'
 
 
 function Coral_02() {

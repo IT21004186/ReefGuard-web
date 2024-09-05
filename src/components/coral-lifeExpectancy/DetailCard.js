@@ -25,13 +25,13 @@ const DetailCard = ({ title, description, linktoNext, button }) => {
                     marginBottom: 5, 
                     marginTop: 5 
                 }} />
-                <Typography sx={{ fontWeight: 'bold', fontSize: '1.2rem' }}>
+                <Typography sx={{ fontWeight: 'bold', fontSize: '1rem' }}>
                     {description}
                 </Typography>
             </CardContent>
             <CardActions sx={{ 
                 marginTop: 'auto', 
-                marginBottom: 1 ,
+                marginBottom: 5 ,
                 justifyContent:"center"
             }}>
                 <Button 

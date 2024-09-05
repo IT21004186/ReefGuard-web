@@ -93,6 +93,7 @@ function CoralLifeExpectancyPrediction() {
                         <ImageCard title="What is Coral bleaching?" linktoNext="CoralBleaching" />
                     </Grid>
 
+
                     {/* Third card */}
                     <Grid
                         item
@@ -107,9 +108,10 @@ function CoralLifeExpectancyPrediction() {
                     >
                         <DetailCard
                             title="Card 3"
-                            description="Worldwide, coral reefs are in danger because of a number of issues, most especially issues such as climate change and sea water pollution. This issue affects Sri Lanka as well"
-                            linktoNext="MoreFacts"
+                            description="Worldwide, coral reefs are in danger because of a number of issues, most especially issues such as sea water pollution."
+                            linktoNext="/MoreFacts"
                             button="Read More"
+                            onClick={() => navigate("/MoreFacts")}
                         />
                     </Grid>
                 </Grid>

@@ -3,15 +3,16 @@ import Image1 from "../Images/coral4.jpg";
 import Image2 from "../Images/coral4.jpg";
 import Image3 from "../Images/coral5.jpg";
 import { Box, Typography, Container, Grid } from '@mui/material';
-import Sidebar from '../Component/Sidebar';
-import BleachCard from '../Component/BleachCard';
+// import Sidebar from './Sidebar';
+import BleachCard from '../BleachCard';
 import WaterDropIcon from '@mui/icons-material/WaterDropOutlined';
 import SpeedOutlinedIcon from '@mui/icons-material/SpeedOutlined';
 import AcUnitOutlinedIcon from '@mui/icons-material/AcUnitOutlined';
 import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
-import FAQ from '../Component/FAQ';
-import YearCard from '../Component/YearCard';
+import FAQ from '../FAQ';
+import YearCard from '../YearCard';
 import { left } from '@popperjs/core';
+
 
 function CoralBleech() {
   return (
