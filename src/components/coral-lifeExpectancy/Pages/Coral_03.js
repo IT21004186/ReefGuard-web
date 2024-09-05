@@ -17,12 +17,12 @@ function Coral_03() {
                     </Grid>
                     <Grid item xs={12} sm={8} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <Box sx={{ width: '100%', textAlign: 'left' }}>
-                            <Typography variant="body1" sx={{ fontSize: '1.6rem', mt: 1, fontWeight: 'bold' }}>
+                            <Typography variant="body1" sx={{ fontSize: '1.6rem', mt: 1, fontWeight: 'bold' ,  fontStyle: 'italic' }}>
                                 Coral 03
                             </Typography>
                         </Box>
                         <Box sx={{ width: '100%', textAlign: 'left', mt: 1 }}>
-                            <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
+                            <Typography variant="body1" sx={{ fontSize: '1.1rem' ,fontFamily: "'Playfair Display', serif" }}>
                                 Globally, ocean warming due to climate change is a rapidly growing threat.
                                 The zooxanthellae within corals’ tissues are sensitive to ocean temperature,
                                 and ocean warming can cause the corals to expel their colorful algae — a process

@@ -41,12 +41,12 @@ function MoreFacts() {
                             </Typography>
                         </Grid>
                         <Grid container spacing={3} sx={{ my: 1, width: "94%", mx: "3%" }}>
-                            <Typography variant="body1" sx={{ fontSize: "1.3rem", textAlign: left, mb: 5 }}>
+                            <Typography variant="body1" sx={{ fontSize: "1.1rem", textAlign: left, mb: 2 }}>
                                 Coral reefs are threatened by both local and global threats,
                                 including overfishing; sediment, nutrient and marine pollution,
                                 and increasing ocean warming and acidification.
                             </Typography>
-                            <Typography variant="body1" sx={{ fontSize: "1.3rem", textAlign: left, mb: 5 }}>
+                            <Typography variant="body1" sx={{ fontSize: "1.1rem", textAlign: left, mb: 5 }}>
                                 Overfishing is the most pervasive local threat to coral reefs.
                                 It can alter the ecological balance on the reef through removing herbivorous
                                 fish that control the macroalgae growing on coral. Sedimentation from land

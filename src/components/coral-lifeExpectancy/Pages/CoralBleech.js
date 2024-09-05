@@ -126,19 +126,22 @@ function CoralBleech() {
                 </Typography>
               </Grid>
             </Grid>
-            <Grid container spacing={3} sx={{ my: 1, width: "94%", mx: "3%" }}>
+            <Grid container spacing={3} sx={{ my: 1, width: "90%", mx: "3%" }}>
               <Typography sx={{ fontSize: "2.1rem", fontWeight: "bold", fontFamily: 'Georgia' }}>
                 Mass coral bleaching events
               </Typography>
             </Grid>
             <Grid container spacing={3} sx={{ my: 1, width: "94%", mx: "3%" }}>
-            <Grid item xs={12} sm={5} sx={{ display: 'flex' }}>
-              <Typography sx={{ fontSize: "1.1rem", fontFamily: 'Georgia' ,textAlign:left}}>
-                The past two decades have seen several widespread coral bleaching events
-                on our Great Barrier Reef, with four mass bleaching events in the last
-                 seven years
-              </Typography>
-            </Grid>
+
+              <Grid item xs={12} sx={{ display: 'flex' }}>
+                <Typography sx={{ fontSize: "1.1rem", fontFamily: 'Georgia', textAlign: 'left', width: '100%' }}>
+                  The past two decades have seen several widespread coral bleaching events
+                  on our Great Barrier Reef, with four mass bleaching events in the last
+                  seven years.
+                </Typography>
+              </Grid>
+
+
             </Grid>
             <Grid container spacing={3} sx={{ my: 1, width: "94%", mx: "3%" }}>
               <Grid item xs={12} sm={8} sx={{ display: 'flex' }}>
