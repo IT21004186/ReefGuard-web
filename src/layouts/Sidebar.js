@@ -7,27 +7,27 @@ const navigation = [
   {
     title: "Dashboard",
     href: "/starter",
-    icon: "bi bi-speedometer2",
+    icon: "bi bi-graph-up",
   },
   {
     title: "Sea Water Pollution",
     href: "/seawaterpollutionidentifier",
-    icon: "bi bi-bell",
+    icon: "bi bi-droplet-half",
   },
   {
     title: "Coral Identification",
     href: "/coralIdentification",
-    icon: "bi bi-patch-check",
+    icon: "bi bi-search",
   },
   {
     title: "Disease Identification",
     href: "/diseaseIdentifier",
-    icon: "bi bi-hdd-stack",
+    icon: "bi bi-radioactive",
   },
   {
     title: "LifeExpectancy Level",
     href: "/CoralLifeExpectancyPrediction",
-    icon: "bi bi-card-text",
+    icon: "bi bi-heart-pulse",
   },
   // {
   //   title: "Grid",
@@ -52,7 +52,7 @@ const navigation = [
   {
     title: "About",
     href: "/about",
-    icon: "bi bi-people",
+    icon: "bi bi-qr-code",
   },
 ];
 
