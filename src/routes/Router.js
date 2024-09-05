@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import { Navigate } from "react-router-dom";
 
+
 /****Layouts*****/
 const FullLayout = lazy(() => import("../layouts/FullLayout.js"));
 const Login = lazy(() => import("../components/login.js"));
@@ -23,6 +24,7 @@ const DiseaseIdentifier = lazy(() => import("../components/disease-identificatio
 const CoralIdentification = lazy(() => import("../components/coral-identification/coralIdentification.js"));
 const PollutionPredictor = lazy(() => import("../components/seaWater-pollution/seawaterpollutionIdentifier.js"));
 const CoralLifeExpectancyPrediction = lazy(() => import("../components/coral-lifeExpectancy/coralLifeExpectancyPrediction.js"));
+const NewSpeciesPage = lazy(() => import("../components/coral-identification/newSpeciesPage.js"));
 
 /*****Routes******/
 
@@ -43,6 +45,7 @@ const ThemeRoutes = [
       { path: "profile", exact: true, element: <Profile /> },
       { path: "seawaterpollutionidentifier", exact: true, element: <PollutionPredictor /> },
       { path: "coralIdentification", exact: true, element: <CoralIdentification /> },
+      { path: "newSpeciesPage", exact: true, element: <NewSpeciesPage /> },
       { path: "diseaseIdentifier", exact: true, element: <DiseaseIdentifier /> },
       { path: "coralLifeExpectancyPrediction", exact: true, element: <CoralLifeExpectancyPrediction /> },
       { path: "about", exact: true, element: <About /> },
