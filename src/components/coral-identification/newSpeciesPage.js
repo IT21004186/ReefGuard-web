@@ -85,7 +85,7 @@ const newSpeciesPage = () => {
         </div>
 
         {/* Physical Characteristics Section */}
-       <div className="d-flex mt-lg">
+       <div className="d-flex half-section-para">
        <div className="physical-characteristics-section  col-6">
           <h2 className="species-heading">Physical Characteristics</h2>
           <p>
@@ -99,15 +99,20 @@ const newSpeciesPage = () => {
             contribute to the coral's energy through photosynthesis.
           </p>
         </div>
-        <img className="col-6"
+        <img className="col-6 Physical-img"
             src={require("../../assets/images/corals/physical-characteristics.jpg")}
             alt="Physical Characteristics"
           />
        </div>
 
         {/* Ecological Importance Section */}
-        {/* <div className="ecological-importance-section">
-          <h2 className="species-heading">Ecological Importance</h2>
+        <div className="d-flex Ecological-section-para">
+        <img className="col-6 Physical-img"
+            src={require("../../assets/images/corals/ecological-importance.jpg")}
+            alt="Ecological Importance"
+          />
+        <div className="ecological-importance-section col-6">
+          <h2 className="species-heading-para">Ecological Importance</h2>
           <p>
             Like other coral species, cauliflower coral plays a crucial role in
             reef building and maintenance. Its dense, branching structure
@@ -117,52 +122,16 @@ const newSpeciesPage = () => {
             interlocking branches of cauliflower coral offer protection and
             breeding grounds for various marine species.
           </p>
-          <img
-            src={require("../../assets/images/corals/ecological-importance.jpg")}
-            alt="Ecological Importance"
-          />
-        </div> */}
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="flex flex-col justify-center">
-            <h3 class="text-2xl font-bold mb-2 text-center text-primary">
-              Ecological Importance
-            </h3>
-            <p class="mb-2 text-center text-muted-foreground">
-              Staghorn coral is a vital component of coral reef ecosystems. Its
-              complex structure provides habitat and shelter for a diverse range
-              of marine life, including fish, invertebrates, and algae. The
-              coral's branches offer protection from predators and strong ocean
-              currents, creating a safe environment for various species to
-              thrive.
-            </p>
-            <p class="text-center text-muted-foreground">
-              In addition to its ecological role, staghorn coral contributes to
-              the physical structure of coral reefs, which protect coastlines
-              from erosion and storm damage. Healthy coral reefs also support
-              local economies through tourism and fisheries, making the
-              conservation of staghorn coral essential for both environmental
-              and economic reasons.
-            </p>
-          </div>
-          <div class="group relative">
-            <img
-              src={require("../../assets/images/corals/ecological-importance.jpg")}
-              alt="Ecological Image"
-              class="w-full h-full object-cover rounded-lg shadow-md transition-transform transform group-hover:scale-105"
-            />
-          </div>
+        </div>
         </div>
       </div>
 
       {/* Footer Section */}
-      {/* <footer className="footer">
+      <footer className="footer">
         <div className="footer-links">
-          <a href="/">Home</a>
-          <a href="/">FAQ</a>
-          <a href="mailto:banukeyapp@gmail.com">Contact us at: banukeyapp@gmail.com</a>
+          
         </div>
-      </footer> */}
+      </footer>
     </div>
   );
 };

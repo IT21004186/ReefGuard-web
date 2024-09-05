@@ -60,20 +60,24 @@
 .overview-section,
 .physical-characteristics-section,
 .ecological-importance-section {
-  background-color: #f0f0f0;
-  padding: 20px;
-  margin: 20px 0;
+  background-color: #e5ecfd;
+  padding: 40px;
+  /* margin: 20px 0; */
   border-radius: 10px;
+}
+
+.ecological-importance-section{
+  text-align: right;
 }
 
   
   .gallery-section {
-    margin: 20px 0;
+    margin: 30px 0;
   }
   
   .gallery {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   
   .gallery img {
@@ -83,18 +87,21 @@
   }
   
   .footer {
-    background-color: #1a374d;
+    /* background-color: #1a374d; */
     color: white;
     padding: 20px;
     text-align: center;
+    background-image: url('../images/corals/footer.png');
+    background-size: cover;
+    background-position: center;
   }
   
-  .footer-links a {
+  /* .footer-links a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
     font-size: 14px;
-  }
+  } */
   
 
   .species-heading-h2{
@@ -104,21 +111,28 @@
     
   }
 
-  .species-heading{
+  .species-heading-para {
+    text-align: right;
     font-weight: bold !important;
     margin-bottom: 40px;
+  }
+
+  .species-heading{
+    font-weight: bold !important;
+    margin-bottom: 20px;
+    
     
   }
 
 
 
   /* Overview container CSS */
-  .overview-section {
+  /* .overview-section {
     background-color: #f0f0f0;
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
-  }
+  } */
   
   .species-heading-h2 {
     font-size: 28px;
@@ -130,7 +144,7 @@
     line-height: 1.8; /* Improve readability */
     font-size: 16px;
     color: #333;
-    text-align: center;
+    text-align: justify;
   }
   
   .overview-container p {
@@ -139,5 +153,18 @@
   
   /*  */
 
+  .half-section-para{
+    margin-top: 150px;
+  }
+
+  .Ecological-section-para{
+    margin-top: 50px;
+  }
+
+
+  .Physical-img{
+    border-radius: 10px;
+    background-color: #e5ecfd;
+  }
 
   /* End of New Species Page CSS */
