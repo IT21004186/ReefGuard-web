@@ -41,3 +41,8 @@
     width: 20%;
     font-size: 1rem;
 }
+
+.update-btn:hover {
+    background-color: #556c84;
+    transition: all 0.4s ease-in-out;
+}
