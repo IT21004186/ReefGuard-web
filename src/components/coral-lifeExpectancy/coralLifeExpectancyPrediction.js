@@ -12,14 +12,36 @@ function CoralLifeExpectancyPrediction() {
     const [year, setYear] = useState('');
     const [month, setMonth] = useState('');
     const [day, setDay] = useState('');
-    const [predicted, setPredicted] = useState('');  // Initialize with empty string instead of 'N/A'
+    const [predicted, setPredicted] = useState('');  
+    const [errors, setErrors] = useState({});
 
     const navigate = useNavigate();
+
+    const validateForm = () => {
+        const newErrors = {};
+        const currentYear = new Date().getFullYear();
+        // if (!year || isNaN(year) || year < 1900 || year > currentYear) {
+        //     newErrors.year = 'Please enter a valid year between 1900 and the current year';
+        // }
+        if (!year || isNaN(year) || year.length !== 4) {
+            newErrors.year = 'Please enter a valid year with exactly 4 digits';
+        }        
+        if (!month || isNaN(month) || month < 1 || month > 12) {
+            newErrors.month = 'Please enter a valid month (1-12)';
+        }
+        if (!day || isNaN(day) || day < 1 || day > 31) {
+            newErrors.day = 'Please enter a valid day (1-31)';
+        }
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-
+        if (!validateForm()) {
+            return; // Prevent form submission if there are validation errors
+        }
 
         try {
             const response = await fetch('https://coral-precent-fxf2bbhwbyhmd8h2.eastus-01.azurewebsites.net/predict', {
@@ -39,7 +61,7 @@ function CoralLifeExpectancyPrediction() {
                 console.log("Hello");
                 console.log(data);
                 // Ensure the data is in the expected format
-                setPredicted(data.data.predicted ? data.data.predicted.toFixed(2) : 'N/A');  // Use predicted from the data and format it
+                setPredicted(data.data.predicted ? data.data.predicted.toFixed(2) : 'N/A');  
             } else {
                 console.error('Failed to fetch coral health data.');
                 setPredicted('Error fetching data');
@@ -49,35 +71,6 @@ function CoralLifeExpectancyPrediction() {
             setPredicted('Error fetching data');
         }
     };
-
-    //     try {
-    //         const response = await fetch('https://coral-precent-fxf2bbhwbyhmd8h2.eastus-01.azurewebsites.net/predict', {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify({
-    //                 YYYY: parseInt(year),
-    //                 MM: parseInt(month),
-    //                 DD: parseInt(day),
-    //             }),
-    //         });
-
-    //         if (response.ok) {
-    //             const data = await response.json();
-    //             console.log(data);
-    //             setPredicted(data.predicted ? data.predicted.toFixed(2) : 'N/A');  
-    //         } else {
-    //             console.error('Failed to fetch coral health data.');
-    //             setPredicted('Error fetching data');
-    //         }
-    //     } catch (error) {
-    //         console.error('Error:', error);
-    //         setPredicted('Error fetching data');
-    //     }
-    // };
-
-
 
     return (
         <Box sx={{ display: 'flex', width: '100%' }}>
@@ -181,7 +174,13 @@ function CoralLifeExpectancyPrediction() {
                                         type="number"
                                         size="small"
                                         value={year}
-                                        onChange={(e) => setYear(e.target.value)}
+                                        // onChange={(e) => setYear(e.target.value)}
+                                        onChange={(e) => {
+                                            setYear(e.target.value);
+                                            setErrors((prev) => ({ ...prev, year: '' })); // Clear error on change
+                                        }}
+                                        error={!!errors.year}
+                                        helperText={errors.year}
                                         sx={{
                                             width: "50%",
                                             backgroundColor: 'white',
@@ -208,7 +207,13 @@ function CoralLifeExpectancyPrediction() {
                                         type="number"
                                         size="small"
                                         value={month}
-                                        onChange={(e) => setMonth(e.target.value)}
+                                        // onChange={(e) => setMonth(e.target.value)}
+                                        onChange={(e) => {
+                                            setMonth(e.target.value);
+                                            setErrors((prev) => ({ ...prev, month: '' })); // Clear error on change
+                                        }}
+                                        error={!!errors.month}
+                                        helperText={errors.month}
                                         sx={{
                                             width: "50%",
                                             backgroundColor: 'white',
@@ -235,7 +240,13 @@ function CoralLifeExpectancyPrediction() {
                                         type="number"
                                         size="small"
                                         value={day}
-                                        onChange={(e) => setDay(e.target.value)}
+                                        // onChange={(e) => setDay(e.target.value)}
+                                        onChange={(e) => {
+                                            setDay(e.target.value);
+                                            setErrors((prev) => ({ ...prev, day: '' })); // Clear error on change
+                                        }}
+                                        error={!!errors.day}
+                                        helperText={errors.day}
                                         sx={{
                                             width: "50%",
                                             backgroundColor: 'white',

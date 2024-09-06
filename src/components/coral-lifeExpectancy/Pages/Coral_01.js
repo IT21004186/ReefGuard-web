@@ -23,13 +23,12 @@ function Coral_01() {
                         </Box>
                         <Box sx={{ width: '100%', textAlign: 'left', mt: 2 }}>
                             <Typography variant="body1" sx={{ fontSize: '1.1rem' ,fontFamily: "'Playfair Display', serif" }}>
-                                Globally, ocean warming due to climate change is a rapidly growing threat.
-                                The zooxanthellae within corals’ tissues are sensitive to ocean temperature,
-                                and ocean warming can cause the corals to expel their colorful algae — a process
-                                known as “coral bleaching.” This leaves behind the appearance of a bright white skeleton
-                                and deprives the polyps of an important source of nutrition. The corals eventually die
-                                if the symbiotic algae don’t return, if there is inadequate time between bleaching for
-                                corals to recover or if other threats impede their recovery.
+                            *Madrepora oculata* is a species of stony coral commonly found in deep waters, particularly in the 
+                            Indian and Pacific Oceans. It belongs to the family Oculinidae and is known for its branching structure
+                            and white to pale pink coloration. This coral species forms complex reef structures, providing habitats
+                            or various marine life, and thrives in cold-water environments, often at depths between 200 and 1,000 meters.
+                            Despite being a deep-sea coral, *Madrepora oculata* contributes to marine biodiversity and plays a significant 
+                            role in the ecosystem.
                             </Typography>
                         </Box>
                     </Grid>
