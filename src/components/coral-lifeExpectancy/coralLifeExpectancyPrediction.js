@@ -20,9 +20,6 @@ function CoralLifeExpectancyPrediction() {
     const validateForm = () => {
         const newErrors = {};
         const currentYear = new Date().getFullYear();
-        // if (!year || isNaN(year) || year < 1900 || year > currentYear) {
-        //     newErrors.year = 'Please enter a valid year between 1900 and the current year';
-        // }
         if (!year || isNaN(year) || year.length !== 4) {
             newErrors.year = 'Please enter a valid year with exactly 4 digits';
         }        
@@ -88,8 +85,8 @@ function CoralLifeExpectancyPrediction() {
                         sx={{
                             display: 'flex',
                             justifyContent: 'center',
-                            padding: 2, // Add some padding inside the grid
-                            maxWidth: "300px", // Set a max width to minimize card size
+                            padding: 2, 
+                            maxWidth: "300px", 
                         }}
                     >
                         <DetailCard
@@ -174,7 +171,6 @@ function CoralLifeExpectancyPrediction() {
                                         type="number"
                                         size="small"
                                         value={year}
-                                        // onChange={(e) => setYear(e.target.value)}
                                         onChange={(e) => {
                                             setYear(e.target.value);
                                             setErrors((prev) => ({ ...prev, year: '' })); // Clear error on change
@@ -207,7 +203,6 @@ function CoralLifeExpectancyPrediction() {
                                         type="number"
                                         size="small"
                                         value={month}
-                                        // onChange={(e) => setMonth(e.target.value)}
                                         onChange={(e) => {
                                             setMonth(e.target.value);
                                             setErrors((prev) => ({ ...prev, month: '' })); // Clear error on change
