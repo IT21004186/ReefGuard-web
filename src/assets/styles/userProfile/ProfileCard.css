@@ -38,11 +38,16 @@
 }
   
 .logout-btn {
-    background-color: #e74c3c;
+    background-color: #F9423D;
     color: white;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
-}  
+}
+
+.logout-btn:hover {
+    background-color: #db200b;
+    transition: all 0.4s ease-in-out;
+}

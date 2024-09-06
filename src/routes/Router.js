@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import { Navigate } from "react-router-dom";
 
+
 /****Layouts*****/
 const FullLayout = lazy(() => import("../layouts/FullLayout.js"));
 const Login = lazy(() => import("../components/login.js"));
@@ -23,6 +24,16 @@ const DiseaseIdentifier = lazy(() => import("../components/disease-identificatio
 const CoralIdentification = lazy(() => import("../components/coral-identification/coralIdentification.js"));
 const PollutionPredictor = lazy(() => import("../components/seaWater-pollution/seawaterpollutionIdentifier.js"));
 const CoralLifeExpectancyPrediction = lazy(() => import("../components/coral-lifeExpectancy/coralLifeExpectancyPrediction.js"));
+const Facts = lazy(() => import("../components/coral-lifeExpectancy/Pages/Facts.js"));
+const CoralBleech = lazy(() => import("../components/coral-lifeExpectancy/Pages/CoralBleech.js"));
+const MoreFacts = lazy(() => import("../components/coral-lifeExpectancy/Pages/MoreFacts.js"));
+const NewSpeciesPage = lazy(() => import("../components/coral-identification/newSpeciesPage.js"));
+
+/***** Coral Routes ****/
+const Coral_01  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Coral_01.js"));
+const Coral_02  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Coral_02.js"));
+const Coral_03  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Coral_03.js"));
+const Coral_04  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Coral_04.js"));
 
 /*****Routes******/
 
@@ -43,8 +54,21 @@ const ThemeRoutes = [
       { path: "profile", exact: true, element: <Profile /> },
       { path: "seawaterpollutionidentifier", exact: true, element: <PollutionPredictor /> },
       { path: "coralIdentification", exact: true, element: <CoralIdentification /> },
+      { path: "newSpeciesPage", exact: true, element: <NewSpeciesPage /> },
       { path: "diseaseIdentifier", exact: true, element: <DiseaseIdentifier /> },
       { path: "coralLifeExpectancyPrediction", exact: true, element: <CoralLifeExpectancyPrediction /> },
+      { path: "facts", exact: true, element: <Facts /> },
+      { path: "CoralBleaching", exact: true, element: <CoralBleech /> },
+      { path: "MoreFacts", exact: true, element: <MoreFacts /> },
+      
+            // Coral-specific routes
+            { path: "Coral_01", exact: true, element: <Coral_01 /> }, // New route for Coral 01
+            { path: "Coral_02", exact: true, element: <Coral_02 /> }, // New route for Coral 02
+            { path: "Coral_03", exact: true, element: <Coral_03 /> }, // New route for Coral 03
+            { path: "Coral_04", exact: true, element: <Coral_04 /> }, // New route for Coral 04
+
+
+
       { path: "about", exact: true, element: <About /> },
       { path: "alerts", exact: true, element: <Alerts /> },
       { path: "badges", exact: true, element: <Badges /> },
@@ -55,6 +79,10 @@ const ThemeRoutes = [
       { path: "forms", exact: true, element: <Forms /> },
       { path: "breadcrumbs", exact: true, element: <Breadcrumbs /> },
       { path: "/", element: <Navigate to="/starter" /> },
+
+
+  
+
     ],
   },
 ];

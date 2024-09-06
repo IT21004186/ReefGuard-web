@@ -18,7 +18,7 @@ function DiseaseIdentifier() {
     return (
         <div>
             <div>
-                <h1>Upload an Image</h1>
+                <h1>Upload an Image To Detect an Coral Disease</h1>
                 <input type="file" accept="image/*" onChange={handleImageChange} />
             </div>
         </div>
