@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "../../assets/styles/../styles/newSpeciesPage.css"; // Update the CSS file reference
-import cauliflowerCoralImage from "../../assets/images/corals/overview.jpg";
-import cauliflowerCoralImage2 from "../../assets/images/corals/cauliflower-coral-1.jpg";
-import cauliflowerCoralImage3 from "../../assets/images/corals/pocillopora-coral-close-up.jpg";
-import cauliflowerCoralImage4 from "../../assets/images/corals/pocillopora-coral-gallery-2.jpg";
+import poritesCoralImage from "../../assets/images/corals/Porites-overview.jpg";
+import poritesCoralImage2 from "../../assets/images/corals/porites-coral-gallery-1.jpg";
+import poritesCoralImage3 from "../../assets/images/corals/porites-Coral-gallery-2.jpg";
+import poritesCoralImage4 from "../../assets/images/corals/porites-Coral-gallery-3.jpg";
 
 const NewSpeciesPage = () => {
   const navigate = useNavigate(); // Hook to handle navigation
@@ -33,7 +33,7 @@ const NewSpeciesPage = () => {
       <div className="main-content">
         {/* Coral Image */}
         <div className="coral-image">
-          <img src={cauliflowerCoralImage} alt="Cauliflower Coral" />
+          <img src={poritesCoralImage} alt="Cauliflower Coral" />
         </div>
 
         {/* Overview Section */}
@@ -87,9 +87,9 @@ const NewSpeciesPage = () => {
         <div className="gallery-section">
           <h2 className="species-heading">Gallery</h2>
           <div className="gallery">
-            <img src={cauliflowerCoralImage4} alt="Cauliflower Coral 1" />
-            <img src={cauliflowerCoralImage2} alt="Cauliflower Coral 2" />
-            <img src={cauliflowerCoralImage3} alt="Cauliflower Coral 3" />
+            <img src={poritesCoralImage2} alt="Cauliflower Coral 1" />
+            <img src={poritesCoralImage3} alt="Cauliflower Coral 2" />
+            <img src={poritesCoralImage4} alt="Cauliflower Coral 3" />
           </div>
         </div>
 
@@ -109,7 +109,7 @@ const NewSpeciesPage = () => {
           </p>
         </div>
         <img className="col-6 Physical-img"
-            src={require("../../assets/images/corals/physical-characteristics.jpg")}
+            src={require("../../assets/images/corals/porites-physical-characteristics-1.jpg")}
             alt="Physical Characteristics"
           />
        </div>
@@ -117,7 +117,7 @@ const NewSpeciesPage = () => {
         {/* Ecological Importance Section */}
         <div className="d-flex Ecological-section-para">
         <img className="col-6 Physical-img"
-            src={require("../../assets/images/corals/ecological-importance.jpg")}
+            src={require("../../assets/images/corals/porites-physical-characteristics-2.jpg")}
             alt="Ecological Importance"
           />
         <div className="ecological-importance-section col-6">
