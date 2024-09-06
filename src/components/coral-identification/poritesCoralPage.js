@@ -17,16 +17,16 @@ const NewSpeciesPage = () => {
     <div className="new-species-page">
       {/* Banner Section */}
       <div className="banner-section">
-        <h1 style={{ fontWeight: 'bold' }}>Cauliflower Coral</h1>
+        <h1 style={{ fontWeight: 'bold' }}>Porites Coral</h1>
       </div>
 
       {/* Navigation Tabs */}
       <div className="nav-tabs">
         <button onClick={() => handleNavigation("/stagHornCoralPage")}>
           Staghorn Coral
-        </button>                                                                    
-        <button className="active-tab" onClick={() => handleNavigation("/newSpeciesPage")}>Cauliflower Coral</button>
-        <button onClick={() => handleNavigation("/poritesCoralPage")}>Porites Coral</button>
+        </button>
+        <button  onClick={() => handleNavigation("/newSpeciesPage")}>Cauliflower Coral</button>
+        <button className="active-tab" onClick={() => handleNavigation("/poritesCoralPage")}>Porites Coral</button>
       </div>
 
       {/* Main Content */}
