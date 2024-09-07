@@ -4,7 +4,7 @@ async function identifyCorals(file) {
         const formData = new FormData();
         formData.append('image', file);
 
-        const response = await fetch('https://coral-identification-model.azurewebsites.net/predict', {
+        const response = await fetch('https://coral-identification.azurewebsites.net/predict', {
             method: 'POST',
             body: formData,
             headers: {
