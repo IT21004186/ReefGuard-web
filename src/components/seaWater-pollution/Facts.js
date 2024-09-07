@@ -81,15 +81,13 @@ function Facts() {
                                     <span style={{ color: 'gray', fontWeight: 'bold' , marginRight: '48px' }}>Species</span> Madrepora oculata
                                 </Typography>
                                 <Typography variant="body1" sx={{ fontSize: "1.2rem", textAlign: 'left', mb: 3 }}>
-                                Madrepora oculata, or zigzag coral, is found in deep waters around Sri Lanka, inhabiting depths of 80 to 1500 meters in the Indian Ocean. 
+                                Sea water pollution is a growing environmental concern in Sri Lanka, an island nation bordered by the Indian Ocean. With its rich biodiversity, the coastal waters of Sri Lanka are home to a wide range of marine species and ecosystems, including coral reefs, mangroves, and seagrass beds. However, the rapid increase in pollution due to human activities is threatening these vital ecosystems. Industrial waste, agricultural runoff, untreated sewage, and plastic debris are some of the primary pollutants entering the ocean, disrupting the balance of marine life. 
                                 </Typography>
                                 <Typography variant="body1" sx={{ fontSize: "1.2rem", textAlign: 'left', mb: 3 }}>
-                                This stony coral contributes to the biodiversity of deep-sea environments, providing essential habitat for various marine species. 
-                                In Sri Lankan waters, it is part of the complex ecosystem of cold-water coral reefs. 
+                                The influx of industrial waste into the sea is a major contributor to water pollution. Factories located along the coast often discharge harmful chemicals, heavy metals, and toxic waste directly into the ocean without proper treatment. These pollutants contaminate the water and accumulate in marine organisms, leading to long-term environmental and health hazards. Heavy metals such as mercury and lead can affect the nervous system of marine species, disrupting their reproductive cycles and threatening the food chain. 
                                 </Typography>
                                 <Typography variant="body1" sx={{ fontSize: "1.2rem", textAlign: 'left', mb: 10 }}>
-                                Conservation efforts are important to protect these deep-sea habitats from threats like deep-sea fishing and climate change, 
-                                ensuring the survival of this and other deep-sea coral species.
+                                Agricultural runoff is another significant source of pollution in Sri Lankan waters. Fertilizers and pesticides used in farming practices are carried by rivers and streams into the ocean, causing nutrient pollution. This excess nutrient load leads to the growth of harmful algal blooms, which deplete oxygen levels in the water, creating dead zones where marine life struggles to survive. The overgrowth of algae can also block sunlight from reaching coral reefs, inhibiting photosynthesis and causing widespread damage to these delicate ecosystems.
                                 </Typography>
                             </Grid>
                         </Grid>
@@ -101,16 +99,13 @@ function Facts() {
                             </Grid>
                             <Grid item xs={12} sm={6} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                                 <Typography variant="body1" sx={{ fontSize: "1.3rem", textAlign: 'left', mb: 5 }}>
-                                Polymastia, a genus of sponge rather than coral, can be found in Sri Lankan waters. 
-                                These marine sponges inhabit various depths, including shallow coastal regions and deeper waters.
+                                Plastic pollution has become an increasingly pressing issue in Sri Lanka’s coastal regions. The improper disposal of plastic waste, such as bags, bottles, and fishing nets, results in massive amounts of debris being washed into the sea. Plastics not only take hundreds of years to degrade but also break down into smaller microplastics, which are ingested by marine organisms. This ingestion can cause physical harm to marine species and introduce toxic substances into the food chain, affecting both wildlife and humans who rely on seafood.
                                 </Typography>
                                 <Typography variant="body1" sx={{ fontSize: "1.3rem", textAlign: 'left', mb: 5 }}>
-                                In Sri Lanka, Polymastia species contribute to the marine ecosystem by providing habitat and shelter
-                                for small marine organisms. They play a role in the biodiversity of coral reefs and marine habitats, 
-                                though they are less studied compared to corals.
+                                The consequences of sea water pollution extend beyond environmental damage, impacting the livelihoods of coastal communities. Many of these communities depend on fishing and tourism for their economic well-being. Polluted waters reduce fish populations and destroy marine habitats, leading to a decline in fish catches and threatening food security. Additionally, polluted beaches and damaged ecosystems deter tourists, resulting in economic losses for businesses that rely on eco-tourism and beach resorts.
                                 </Typography>
                                 <Typography variant="body1" sx={{ fontSize: "1.3rem", textAlign: 'left', mb: 5 }}>
-                                Conservation of their habitat is crucial for maintaining the overall health of marine ecosystems in the region.
+                                Efforts to mitigate sea water pollution are crucial to preserving Sri Lanka's marine environment. Conservation initiatives such as stricter regulations on waste disposal, improved sewage treatment systems, and sustainable agricultural practices can help reduce the amount of pollution entering the ocean. Public awareness campaigns and community-driven clean-up activities are also essential in promoting responsible waste management. By taking collective action, Sri Lanka can safeguard its marine biodiversity and ensure a healthy and sustainable future for its coastal ecosystems and the people who depend on them.
                                 </Typography>
                             </Grid>
                             <Grid item xs={12} sm={1} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
