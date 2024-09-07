@@ -27,7 +27,7 @@ const SalesChart = () => {
         borderRadius: 2,
       },
     },
-    colors: ["#0d6efd", "#009efb", "#6771dc"],
+    colors: ["	#00FFFF","#0d6efd", "#009efb"],
     xaxis: {
       categories: [
         "Jan",
@@ -57,35 +57,43 @@ const SalesChart = () => {
   };
   const series = [
     {
-      name: "2020",
+      name: "Cauliflower Coral",
       data: [20, 40, 50, 30, 40, 50, 30, 30, 40],
     },
     {
-      name: "2022",
+      name: "Pocillopora Coral",
       data: [10, 20, 40, 60, 20, 40, 50, 60, 20],
+    },
+    {
+      name: "Staghorn Coral",
+      data: [0, 50, 20, 40, 20, 40, 20, 60, 20],
     },
   ];
 
   return (
     <Card>
       <CardBody>
-        <CardTitle tag="h5">Sales Summary</CardTitle>
+        <CardTitle tag="h5">Extent of Coral Damage</CardTitle>
         <CardSubtitle className="text-muted" tag="h6">
           Yearly Sales Report
         </CardSubtitle>
         <div className="bg-primary text-white my-3 p-3 rounded">
           <Row>
-            <Col md="4">
-              <h6>Total Sales</h6>
-              <h4 className="mb-0 fw-bold">$10,345</h4>
+            <Col md="3">
+              <h6>Identified Polluted Zones</h6>
+              <h4 className="mb-0 fw-bold">3</h4>
             </Col>
-            <Col md="4">
-              <h6>This Month</h6>
-              <h4 className="mb-0 fw-bold">$7,545</h4>
+            <Col md="3">
+              <h6>Total no of Identified Corals</h6>
+              <h4 className="mb-0 fw-bold">3</h4>
+            </Col>  
+            <Col md="3">
+              <h6>No of Diseases Identified</h6>
+              <h4 className="mb-0 fw-bold">4</h4>
             </Col>
-            <Col md="4">
-              <h6>This Week</h6>
-              <h4 className="mb-0 fw-bold">$1,345</h4>
+            <Col md="3">
+              <h6>Avarage Health Predicted</h6>
+              <h4 className="mb-0 fw-bold">60%</h4>
             </Col>
           </Row>
         </div>

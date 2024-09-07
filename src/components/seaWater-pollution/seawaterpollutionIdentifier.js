@@ -3,7 +3,7 @@ import "../../assets/styles/seawaterpollutionIdentifier.css";
 
 function PollutionPredictor(){
   return (
-    <div>Sea water Polution</div>
+    <div>Sea Water Polution</div>
   );
 }
 

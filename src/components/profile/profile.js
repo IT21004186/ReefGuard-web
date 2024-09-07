@@ -12,7 +12,6 @@ const Profile = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-
     const fetchUserData = async () => {
       auth.onAuthStateChanged(async (user) => {
         if (user) {
@@ -23,14 +22,13 @@ const Profile = () => {
             } else {
               console.log("User data not found");
             }
-          } else {
+        } else {
             console.log("User is not logged in");
-          }
-        });
-      };
-  
+        }
+      });
+    };
       fetchUserData();
-    }, []);
+  }, []);
   
     const handleLogout = async () => {
       try {

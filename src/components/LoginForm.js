@@ -67,8 +67,9 @@ const handleSubmit = async (e) => {
         <button type="submit" className="submit-button">
           SIGN IN
         </button>
-        <p className="text-muted text-right" style={{ color: "white" }}>
-          Don't have an account? <Link to="/register">Sign up</Link>
+        <p className="signup-text">
+          <span>Don't have an account? </span> 
+          <Link to="/register" className="signup-link">Sign up</Link>
         </p>
       </form>
     </div>

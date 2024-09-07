@@ -8,7 +8,7 @@ const FullLayout = () => {
     <main>
       {/********header**********/}
       <Header />
-      <div className="pageWrapper d-lg-flex">
+      <div className="pageWrapper d-lg-flex" style={{ paddingTop: '60px' }}>
         {/********Sidebar**********/}
         <aside className="sidebarArea shadow" id="sidebarArea">
           <Sidebar />
@@ -24,5 +24,6 @@ const FullLayout = () => {
     </main>
   );
 };
+
 
 export default FullLayout;
