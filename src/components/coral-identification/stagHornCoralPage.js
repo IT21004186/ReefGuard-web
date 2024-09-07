@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "../../assets/styles/../styles/newSpeciesPage.css"; // Update the CSS file reference
-import cauliflowerCoralImage from "../../assets/images/corals/overview.jpg";
-import cauliflowerCoralImage2 from "../../assets/images/corals/cauliflower-coral-1.jpg";
-import cauliflowerCoralImage3 from "../../assets/images/corals/pocillopora-coral-close-up.jpg";
-import cauliflowerCoralImage4 from "../../assets/images/corals/pocillopora-coral-gallery-2.jpg";
+import staghornCoralImage from "../../assets/images/corals/staghorn-overview.jpg";
+import staghornCoralImage2 from "../../assets/images/corals/staghorn-gallery-1.jpg";
+import staghornCoralImage3 from "../../assets/images/corals/staghorn-gallery-2.jpg";
+import staghornCoralImage4 from "../../assets/images/corals/staghorn-gallery-3.jpg";
 
 const NewSpeciesPage = () => {
   const navigate = useNavigate(); // Hook to handle navigation
@@ -17,15 +17,15 @@ const NewSpeciesPage = () => {
     <div className="new-species-page">
       {/* Banner Section */}
       <div className="banner-section">
-        <h1 style={{ fontWeight: 'bold' }}>Cauliflower Coral</h1>
+      <h1 style={{ fontWeight: 'bold' }}>Staghorn Coral</h1>
       </div>
 
       {/* Navigation Tabs */}
       <div className="nav-tabs">
-        <button onClick={() => handleNavigation("/stagHornCoralPage")}>
+        <button className="active-tab" onClick={() => handleNavigation("/stagHornCoralPage")}>
           Staghorn Coral
-        </button>                                                                    
-        <button className="active-tab" onClick={() => handleNavigation("/newSpeciesPage")}>Cauliflower Coral</button>
+        </button>
+        <button  onClick={() => handleNavigation("/newSpeciesPage")}>Cauliflower Coral</button>
         <button onClick={() => handleNavigation("/poritesCoralPage")}>Porites Coral</button>
       </div>
 
@@ -33,7 +33,7 @@ const NewSpeciesPage = () => {
       <div className="main-content">
         {/* Coral Image */}
         <div className="coral-image">
-          <img src={cauliflowerCoralImage} alt="Cauliflower Coral" />
+          <img src={staghornCoralImage} alt="Cauliflower Coral" />
         </div>
 
         {/* Overview Section */}
@@ -87,9 +87,9 @@ const NewSpeciesPage = () => {
         <div className="gallery-section">
           <h2 className="species-heading">Gallery</h2>
           <div className="gallery">
-            <img src={cauliflowerCoralImage4} alt="Cauliflower Coral 1" />
-            <img src={cauliflowerCoralImage2} alt="Cauliflower Coral 2" />
-            <img src={cauliflowerCoralImage3} alt="Cauliflower Coral 3" />
+            <img src={staghornCoralImage2} alt="Cauliflower Coral 1" />
+            <img src={staghornCoralImage3} alt="Cauliflower Coral 2" />
+            <img src={staghornCoralImage4} alt="Cauliflower Coral 3" />
           </div>
         </div>
 
@@ -109,7 +109,7 @@ const NewSpeciesPage = () => {
           </p>
         </div>
         <img className="col-6 Physical-img"
-            src={require("../../assets/images/corals/physical-characteristics.jpg")}
+            src={require("../../assets/images/corals/staghorn-physical-characteristics-1.jpg")}
             alt="Physical Characteristics"
           />
        </div>
@@ -117,7 +117,7 @@ const NewSpeciesPage = () => {
         {/* Ecological Importance Section */}
         <div className="d-flex Ecological-section-para">
         <img className="col-6 Physical-img"
-            src={require("../../assets/images/corals/ecological-importance.jpg")}
+            src={require("../../assets/images/corals/staghorn-physical-characteristics-2.jpg")}
             alt="Ecological Importance"
           />
         <div className="ecological-importance-section col-6">
