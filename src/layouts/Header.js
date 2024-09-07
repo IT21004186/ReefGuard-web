@@ -19,7 +19,6 @@ import user1 from "../assets/images/users/user4.jpg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
 
   const toggle = () => setDropdownOpen((prevState) => !prevState);
@@ -29,8 +28,21 @@ const Header = () => {
   const showMobilemenu = () => {
     document.getElementById("sidebarArea").classList.toggle("showSidebar");
   };
+
   return (
-    <Navbar style={{backgroundColor: "#134B70" }} light expand="md" className="fix-header">
+    <Navbar
+      style={{
+        backgroundColor: "#134B70",
+        position: "fixed",
+        top: 0,
+        width: "100%",
+        zIndex: 1000,
+        paddingBottom: '10px'
+      }}
+      light
+      expand="md"
+      className="fix-header"
+    >
       <div className="d-flex align-items-center">
         <div className="d-lg-block d-none me-5 pe-3">
           <Logo />
@@ -40,7 +52,7 @@ const Header = () => {
         </NavbarBrand>
         <Button
           color="primary"
-          className=" d-lg-none"
+          className="d-lg-none"
           onClick={() => showMobilemenu()}
         >
           <i className="bi bi-list"></i>
@@ -63,27 +75,7 @@ const Header = () => {
 
       <Collapse navbar isOpen={isOpen}>
         <Nav className="me-auto" navbar>
-          {/* <NavItem>
-            <Link to="/starter" className="nav-link">
-              Starter
-            </Link>
-          </NavItem> */}
-          {/* <NavItem>
-            <Link to="/about" className="nav-link">
-              About
-            </Link>
-          </NavItem> */}
-          {/* <UncontrolledDropdown inNavbar nav>
-            <DropdownToggle caret nav>
-              DD Menu
-            </DropdownToggle>
-            <DropdownMenu end>
-              <DropdownItem>Option 1</DropdownItem>
-              <DropdownItem>Option 2</DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>Reset</DropdownItem>
-            </DropdownMenu>
-          </UncontrolledDropdown> */}
+          {/* Add your navigation links here */}
         </Nav>
         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
           <DropdownToggle color="transparent">
@@ -92,7 +84,7 @@ const Header = () => {
               alt="profile"
               className="rounded-circle"
               width="30"
-            ></img>
+            />
           </DropdownToggle>
           <DropdownMenu>
             <DropdownItem header>Info</DropdownItem>

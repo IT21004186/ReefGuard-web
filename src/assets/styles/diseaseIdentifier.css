@@ -1,0 +1,99 @@
+/* Styles for the container */
+.disease-identify-container {
+    text-align: center;
+    padding: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the header */
+.disease-identify-header {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Styles for the description */
+.disease-identify-description {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #555;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Styles for the image upload section */
+.disease-identify-image-upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Styles for the upload box */
+.disease-identify-upload-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    color: #aaa;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.disease-identify-upload-box:hover {
+    border-color: #888;
+}
+
+/* Image preview styling */
+.disease-identify-upload-box-image-preview {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Styles for the submit button */
+.disease-identify-submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.disease-identify-submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Prediction result styling */
+.coral-disease-prediction-result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.coral-disease-prediction-result h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.coral-disease-prediction-result p {
+    font-size: 1.2em;
+    color: #555;
+}
