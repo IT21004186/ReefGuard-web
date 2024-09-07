@@ -10,9 +10,9 @@ import Image3 from './Images/coral7.jpg';
 import Image4 from './Images/coral9.jpg';
 
 const images = [
-    { src: Image1, name: 'Coral 1', next: "Coral_01" },
-    { src: Image2, name: 'Coral 2', next: "Coral_02" },
-    { src: Image3, name: 'Coral 3', next: "Coral_03" },
+    { src: Image1, name: 'Cauliflower Coral', next: "Coral_01" },
+    { src: Image2, name: 'Pocillopora Coral', next: "Coral_02" },
+    { src: Image3, name: 'Staghorn Coral', next: "Coral_03" },
     { src: Image4, name: 'Coral 4', next: "Coral_04" },
 ];
 

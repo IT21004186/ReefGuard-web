@@ -33,6 +33,28 @@ function CoralLifeExpectancyPrediction() {
         return Object.keys(newErrors).length === 0;
     };
 
+    const getHealthStatus = (predicted) => {
+        let status = '';
+        let color = '';
+        if (predicted <= 20) {
+            status = 'No Stress';
+            color = 'blue';
+        } else if (predicted <= 40) {
+            status = 'Watch';
+            color = 'yellow';
+        } else if (predicted <= 60) {
+            status = 'Warning';
+            color = 'orange';
+        } else if (predicted <= 80) {
+            status = 'Alert Level 1';
+            color = 'lightcoral'; // Light Red
+        } else {
+            status = 'Alert Level 2';
+            color = 'red'; // Dark Red
+        }
+        return { status, color };
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -234,8 +256,6 @@ function CoralLifeExpectancyPrediction() {
                                         variant="outlined"
                                         type="number"
                                         size="small"
-                                        value={day}
-                                        // onChange={(e) => setDay(e.target.value)}
                                         onChange={(e) => {
                                             setDay(e.target.value);
                                             setErrors((prev) => ({ ...prev, day: '' })); // Clear error on change
@@ -285,6 +305,15 @@ function CoralLifeExpectancyPrediction() {
                                     <Grid item xs={12} sx={{ mb: 3 }}>
                                         <Typography sx={{ fontWeight: 'bold', fontSize: '1.5rem' }}>
                                             Coral Health Percentage: {predicted}%
+                                        </Typography>
+                                        <Typography
+                                            sx={{
+                                                fontWeight: 'bold',
+                                                fontSize: '1.5rem',
+                                                color: getHealthStatus(predicted).color,
+                                            }}
+                                        >
+                                            Status: {getHealthStatus(predicted).status}
                                         </Typography>
                                     </Grid>
                                 )}
