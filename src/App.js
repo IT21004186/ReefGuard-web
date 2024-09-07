@@ -5,6 +5,7 @@ import Themeroutes from "./routes/Router";
 import Login from "./components/login";
 import Register from "./components/register";
 
+
 const App = () => {
   const [user, setUser] = useState(null);
 
@@ -20,6 +21,8 @@ const App = () => {
     { path: "/", element: user ? <Navigate to="/starter" /> : <Navigate to="/login" /> },
     { path: "/login", element: user ? <Navigate to="/starter" /> : <Login /> },
     { path: "/register", element: user ? <Navigate to="/starter" /> : <Register /> },
+
+
     ...Themeroutes
   ]);
 

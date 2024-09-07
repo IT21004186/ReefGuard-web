@@ -15,6 +15,12 @@ $dark: #1e2a35;
 $light: #eaf2fb;
 $secondary: #35363b;
 
+$darkblue: #1A374D;
+$majesticblue: #134B70;
+$litenavy: #406882;
+$oceanblue: #6998AB;
+$highblue: #B1D0E0;
+
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
@@ -77,5 +83,5 @@ $btn-focus-width: 0px;
 // Theme sidebar width
 /********************/
 $sidebarWidth: 280px;
-$sidebarColor: $dark;
-$sidebarHeight: 100; //change to 100vh to see the original way
+$sidebarColor: $darkblue;
+$sidebarHeight: 100;
