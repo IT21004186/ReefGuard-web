@@ -26,8 +26,8 @@ function Facts() {
                             color: 'white',
                             textAlign: 'left'
                         }}>
-                            In Sri Lanka, an island nation in the Indian Ocean,
-                            there are many varieties of coral reefs that are vital to the marine environment....
+                            In Sri Lanka, seawater pollution is a rising concern, 
+                            with industrial waste, agricultural runoff, and plastic debris harming marine life and ecosystems. 
                         </Typography>
                     </Box>
 
@@ -48,10 +48,10 @@ function Facts() {
                                 borderRadius: 1
                             }}>
                                 <Typography variant="h6" sx={{ fontSize: '1.2rem', fontWeight: 'bold' }}>
-                                    In Sri Lanka, an island nation in the Indian Ocean, diverse coral reefs are essential to the marine environment. 
-                                    These reefs support a wide range of marine life, providing critical habitat and contributing to the health and productivity 
-                                    of the oceanic ecosystem. The rich coral biodiversity around Sri Lanka plays a key role in sustaining fish populations and 
-                                    protecting coastlines from erosion. Below are some common corals found near Sri Lanka:
+                                    In Sri Lanka, an island nation in the Indian Ocean, seawater pollution has become a growing environmental concern. 
+                                    The country's coastal waters are increasingly contaminated by industrial waste, agricultural runoff, and plastic debris, which pose serious threats to marine life and ecosystems. 
+                                    Pollutants disrupt the balance of the marine environment, harming coral reefs, fish populations, and even local communities that rely on the ocean for their livelihoods. 
+                                    Efforts to combat seawater pollution, such as stricter regulations and community-driven clean-up initiatives, are essential to protect the country's rich biodiversity and ensure sustainable coastal development.:
                                 </Typography>
                             </Box>
                         </Box>
