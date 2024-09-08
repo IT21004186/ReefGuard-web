@@ -86,7 +86,6 @@ function DiseaseTable() {
 
     return (
         <div>
-            {/* Title and Add Button */}
             <div className="title-button-container">
                 <h2 className="table-title">Coral Disease Identifitaction</h2>
                 <button className="add-button" onClick={handleNavigateToAdd}>
