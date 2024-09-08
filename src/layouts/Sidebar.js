@@ -31,7 +31,7 @@ const navigation = [
   },
   {
     title: "About",
-    href: "/about",
+    href: "/diseaseTable",
     icon: "bi bi-qr-code",
   },
 ];
