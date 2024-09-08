@@ -31,7 +31,7 @@ const navigation = [
   },
   {
     title: "About",
-    href: "/about",
+    href: "/CoralTable",
     icon: "bi bi-qr-code",
   },
 ];
