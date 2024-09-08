@@ -1,26 +1,84 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../../assets/styles/CoralIdentification.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "../../assets/styles/CoralIdentification.css";
+import { identifyCorals } from "../../services/coral-species-identification/CoralSpecies";
 
 function CoralIdentification() {
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [imageResult, setImageResult] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+
+  const handleIdentifyCoral = async () => {
+    if (!selectedFile) {
+      alert("Please upload an image.");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const result = await identifyCorals(selectedFile);
+      setImageResult(result.image); // Assuming result.image is the base64 image string
+    } catch (error) {
+      console.error("Error identifying coral:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="coral-identification">
-      <h2>Coral Identification</h2>
-      <p>
-        Upload an image of coral to quickly identify its species. Our advanced model is trained
-        to recognize various coral species with high accuracy, helping researchers, divers, and
-        enthusiasts alike.
-      </p>
-      <div className="upload-box">
-        <div className="upload-area">
-          <p style={{ color: 'GrayText' }}>
-            Drag and drop or click to upload your coral image. Our system will analyze it and
-            provide you with detailed information about the coral species.
-            <input type="file" accept="image/*" className="upload-box" />
+      <div className="banner-section-1">
+        <h1 style={{ fontWeight: "bold" }}>Coral Identification</h1>
+      </div>
+
+      <div className="section-1">
+        <div className="upload-box">
+          <h2 style={{ fontWeight: "bold", color: "white" }}>
+            How to Identify corals?
+          </h2>
+          <p style={{ color: "white", padding: "20px" }}>
+            Upload an image of coral to quickly identify its species. Our
+            advanced model is trained to recognize various coral species with
+            high accuracy, helping researchers, divers, and enthusiasts alike.
           </p>
+          <div className="upload-area">
+            <p style={{ color: "white" }}>
+              Drag and drop or click to upload your coral image. Our system will
+              analyze it and provide you with detailed information about the
+              coral species.
+              <input
+                type="file"
+                accept="image/*"
+                className="upload-box"
+                onChange={handleFileChange}
+              />
+            </p>
+          </div>
+        </div>
+        <button className="upload-btn" onClick={handleIdentifyCoral}>
+          {loading ? "Identifying..." : "Identify Coral"}
+        </button>
+      </div>
+
+      <div className="d-flex justify-content-center">
+        <div className="output-area">
+          <h3 style={{ textAlign: "left", margin: "50px", color: "#bcdbff" }}>
+            Result
+          </h3>
+          {imageResult && (
+            <img
+              src={`data:image/jpeg;base64,${imageResult}`}
+              alt="Identified Coral"
+              style={{ maxWidth: "100%", margin: "20px" }}
+            />
+          )}
         </div>
       </div>
-      <button className="upload-btn">Identify Coral</button>
+
       <ExploreCoralSpecies />
     </div>
   );
@@ -31,27 +89,27 @@ function ExploreCoralSpecies() {
 
   const sections = [
     {
-      title: 'About the Coral Species',
+      title: "About the Coral Species",
       description:
-        'Explore and learn about the vast diversity of coral species from around the world. Our database is continuously updated to include newly discovered species.',
-      link: '/newSpeciesPage',
+        "Explore and learn about the vast diversity of coral species from around the world. Our database is continuously updated to include newly discovered species.",
+      link: "/newSpeciesPage",
     },
     {
-      title: 'Understand Coral Ecosystems',
+      title: "Understand Coral Ecosystems",
       description:
-        'Gain insights into coral ecosystems, their roles in marine environments, and why protecting them is vital for our planet’s health.',
-      link: '#',
+        "Gain insights into coral ecosystems, their roles in marine environments, and why protecting them is vital for our planet’s health.",
+      link: "#",
     },
     {
-      title: 'Support Coral Conservation',
+      title: "Support Coral Conservation",
       description:
-        'Join global efforts in coral conservation by contributing your data and supporting initiatives that protect these vital marine organisms.',
-      link: '#',
+        "Join global efforts in coral conservation by contributing your data and supporting initiatives that protect these vital marine organisms.",
+      link: "#",
     },
   ];
 
   const handleLearnMore = (link) => {
-    if (link !== '#') {
+    if (link !== "#") {
       navigate(link); // Use react-router navigation
     }
   };
@@ -62,7 +120,10 @@ function ExploreCoralSpecies() {
         <div key={index} className="coral-section">
           <h3>{section.title}</h3>
           <p>{section.description}</p>
-          <button onClick={() => handleLearnMore(section.link)} className="learn-more-btn">
+          <button
+            onClick={() => handleLearnMore(section.link)}
+            className="learn-more-btn"
+          >
             Learn More
           </button>
         </div>
@@ -77,54 +138,95 @@ export default CoralIdentification;
 
 
 
-// import React from 'react';
-// import '../../assets/styles/CoralIdentification.css';
+
+
+
+
+
+
+
+
+
+
+
+// import React from "react";
+// import { useNavigate } from "react-router-dom";
+// import "../../assets/styles/CoralIdentification.css";
 
 // function CoralIdentification() {
 //   return (
-//       <div className="coral-identification">
-//         <h2>Coral identification</h2>
-//         <p>
-//           Upload an image of coral to quickly identify its species. Our advanced model is trained
-//           to recognize various coral species with high accuracy, helping researchers, divers, and
-//           enthusiasts alike.
-//         </p>
+//     <div className="coral-identification">
+//       <div className="banner-section-1">
+//         <h1 style={{ fontWeight: "bold" }}>Coral Identification</h1>
+//       </div>
+
+//       <div className="section-1">
 //         <div className="upload-box">
+//           <h2 style={{ fontWeight: "bold", color: "white" }}>
+//             How to Identify corals?
+//           </h2>
+//           <p style={{ color: "white", padding: "20px" }}>
+//             Upload an image of coral to quickly identify its species. Our
+//             advanced model is trained to recognize various coral species with
+//             high accuracy, helping researchers, divers, and enthusiasts alike.
+//           </p>
 //           <div className="upload-area">
-//             <p style={{color:'GrayText'}}> 
-//               Drag and drop or click to upload your coral image. Our system will analyze it and
-//               provide you with detailed information about the coral species.<input type='file' accept="image/*" className="upload-box"></input>
+//             <p style={{ color: "white" }}>
+//               Drag and drop or click to upload your coral image. Our system will
+//               analyze it and provide you with detailed information about the
+//               coral species.
+//               <input type="file" accept="image/*" className="upload-box" />
 //             </p>
-           
 //           </div>
 //         </div>
 //         <button className="upload-btn">Identify Coral</button>
-//         <ExploreCoralSpecies />
 //       </div>
+
+//       <div className="d-flex justify-content-center">
+//       <div className="output-area">
+//         <h3 style={{textAlign:"left", margin:"50px", color:"#bcdbff"}}>Result</h3>
+        
+//       </div>
+//       </div>
+
+//       <ExploreCoralSpecies />
+
+      
+
+      
+//     </div>
 //   );
 // }
 
 // function ExploreCoralSpecies() {
+//   const navigate = useNavigate();
+
 //   const sections = [
 //     {
-//       title: 'About the Coral Species',
+//       title: "About the Coral Species",
 //       description:
-//         'Explore and learn about the vast diversity of coral species from around the world. Our database is continuously updated to include newly discovered species.',
-//       link: '/newSpeciesPage',
+//         "Explore and learn about the vast diversity of coral species from around the world. Our database is continuously updated to include newly discovered species.",
+//       link: "/newSpeciesPage",
 //     },
 //     {
-//       title: 'Understand Coral Ecosystems',
+//       title: "Understand Coral Ecosystems",
 //       description:
-//         'Gain insights into coral ecosystems, their roles in marine environments, and why protecting them is vital for our planet’s health.',
-//       link: '#',
+//         "Gain insights into coral ecosystems, their roles in marine environments, and why protecting them is vital for our planet’s health.",
+//       link: "#",
 //     },
 //     {
-//       title: 'Support Coral Conservation',
+//       title: "Support Coral Conservation",
 //       description:
-//         'Join global efforts in coral conservation by contributing your data and supporting initiatives that protect these vital marine organisms.',
-//       link: '#',
+//         "Join global efforts in coral conservation by contributing your data and supporting initiatives that protect these vital marine organisms.",
+//       link: "#",
 //     },
 //   ];
+
+//   const handleLearnMore = (link) => {
+//     if (link !== "#") {
+//       navigate(link); // Use react-router navigation
+//     }
+//   };
 
 //   return (
 //     <div className="explore-coral-species">
@@ -132,9 +234,12 @@ export default CoralIdentification;
 //         <div key={index} className="coral-section">
 //           <h3>{section.title}</h3>
 //           <p>{section.description}</p>
-//           <a href={section.link} className="learn-more-btn">
+//           <button
+//             onClick={() => handleLearnMore(section.link)}
+//             className="learn-more-btn"
+//           >
 //             Learn More
-//           </a>
+//           </button>
 //         </div>
 //       ))}
 //     </div>
@@ -142,5 +247,4 @@ export default CoralIdentification;
 // }
 
 // export default CoralIdentification;
-
 

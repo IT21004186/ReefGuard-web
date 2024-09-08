@@ -1,14 +1,12 @@
 import { lazy } from "react";
 import { Navigate } from "react-router-dom";
 
-
 /****Layouts*****/
 const FullLayout = lazy(() => import("../layouts/FullLayout.js"));
 const Login = lazy(() => import("../components/login.js"));
 const Register = lazy(() => import("../components/register.js"));
 
-/***** Pages ****/
-
+/***** Pages *****/
 const Starter = lazy(() => import("../views/Starter.js"));
 const About = lazy(() => import("../views/About.js"));
 const Alerts = lazy(() => import("../views/ui/Alerts"));
@@ -28,6 +26,8 @@ const Facts = lazy(() => import("../components/coral-lifeExpectancy/Pages/Facts.
 const CoralBleech = lazy(() => import("../components/coral-lifeExpectancy/Pages/CoralBleech.js"));
 const MoreFacts = lazy(() => import("../components/coral-lifeExpectancy/Pages/MoreFacts.js"));
 const NewSpeciesPage = lazy(() => import("../components/coral-identification/newSpeciesPage.js"));
+const StagHornCoralPage = lazy(() => import("../components/coral-identification/stagHornCoralPage.js")); // Capitalized
+const PoritesCoralPage = lazy(() => import("../components/coral-identification/poritesCoralPage.js"));
 const DiseaseTable = lazy(() => import("../components/disease-identification/diseaseIdentifiedTable.js"));
 
 /***** Coral Routes ****/
@@ -37,7 +37,6 @@ const Coral_03  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Co
 const Coral_04  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Coral_04.js"));
 
 /*****Routes******/
-
 const ThemeRoutes = [
   {
     path: "/login",
@@ -56,6 +55,8 @@ const ThemeRoutes = [
       { path: "seawaterpollutionidentifier", exact: true, element: <PollutionPredictor /> },
       { path: "coralIdentification", exact: true, element: <CoralIdentification /> },
       { path: "newSpeciesPage", exact: true, element: <NewSpeciesPage /> },
+      { path: "stagHornCoralPage", exact: true, element: <StagHornCoralPage /> }, // Updated name here
+      { path: "poritesCoralPage", exact: true, element: <PoritesCoralPage /> },
       { path: "diseaseIdentifier", exact: true, element: <DiseaseIdentifier /> },
       { path: "coralLifeExpectancyPrediction", exact: true, element: <CoralLifeExpectancyPrediction /> },
       { path: "facts", exact: true, element: <Facts /> },
