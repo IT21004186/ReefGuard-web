@@ -130,3 +130,19 @@
   background-size: cover;
   background-position: center;
 }
+
+
+.cancel-btn{
+  opacity: 0;   /* Makes the button invisible */
+  pointer-events: auto;
+  position: absolute;
+  right: 350px;
+  height: 40px;
+  cursor: default !important;
+ 
+}
+
+.upload-btn-section{
+  display: flex;
+  justify-content: center;
+}
