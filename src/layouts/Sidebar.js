@@ -21,7 +21,7 @@ const navigation = [
   },
   {
     title: "Disease Identification",
-    href: "/diseaseIdentifier",
+    href: "/diseaseTable",
     icon: "bi bi-radioactive",
   },
   {
