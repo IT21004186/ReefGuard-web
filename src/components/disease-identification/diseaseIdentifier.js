@@ -12,7 +12,6 @@ function DiseaseIdentifier() {
     const [file, setFile] = useState(null);
     const [prediction, setPrediction] = useState(null);
     const [userDetails, setUserDetails] = useState(null);
-    console.log("user Data:", userDetails);
     const [user, setUser] = useState(null);
 
     // Get the authenticated user
