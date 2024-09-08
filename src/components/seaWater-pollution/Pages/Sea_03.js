@@ -1,9 +1,10 @@
 import React from 'react'
-import Image1 from '../Images/coral9.jpg'
+import Image1 from '../Images/coral7.jpg'
 import { Box, Grid, Typography  } from '@mui/material'
+// import AllCoral from '../Component/AllCoral'
 import HealthForm from '../HealthForm'
 
-function Coral_04() {
+function Sea_03() {
     return (
         <Box sx={{ display: 'flex', width: '100%' }}>
             <Box sx={{ width: '100%', margin: 'auto', height: '100%' }}>
@@ -16,25 +17,19 @@ function Coral_04() {
                     </Grid>
                     <Grid item xs={12} sm={8} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <Box sx={{ width: '100%', textAlign: 'left' }}>
-                            <Typography variant="body1" sx={{ fontSize: '1.6rem', mt: 1, fontWeight: 'bold',  fontStyle: 'italic' }}>
-                                Coral 04
+                            <Typography variant="body1" sx={{ fontSize: '1.6rem', mt: 1, fontWeight: 'bold' ,  fontStyle: 'italic' }}>
+                            Chemical Contaminants
                             </Typography>
                         </Box>
                         <Box sx={{ width: '100%', textAlign: 'left', mt: 1 }}>
                             <Typography variant="body1" sx={{ fontSize: '1.1rem' ,fontFamily: "'Playfair Display', serif" }}>
-                                Globally, ocean warming due to climate change is a rapidly growing threat.
-                                The zooxanthellae within corals’ tissues are sensitive to ocean temperature,
-                                and ocean warming can cause the corals to expel their colorful algae — a process
-                                known as “coral bleaching.” This leaves behind the appearance of a bright white skeleton
-                                and deprives the polyps of an important source of nutrition. The corals eventually die
-                                if the symbiotic algae don’t return, if there is inadequate time between bleaching for
-                                corals to recover or if other threats impede their recovery.
+                            Industrial waste, heavy metals, and hazardous chemicals like mercury and lead often make their way into seawater through improper disposal or accidental spills. These contaminants poison marine life, causing reproductive issues and leading to the decline of many species. Chemical pollutants can accumulate in the food chain, affecting not only marine organisms but also humans who consume seafood. This type of pollution is difficult to reverse, and its long-term effects can be catastrophic for biodiversity.
                             </Typography>
                         </Box>
                     </Grid>
 
                 </Grid>
-                <Grid container spacing={0} sx={{ mt: 5, width: "94%", mx: "3%" }}>
+                <Grid container spacing={5} sx={{ my: 5, width: "94%", mx: "3%" }}>
                     <HealthForm />
                 </Grid>
             </Box>
@@ -42,4 +37,4 @@ function Coral_04() {
     )
 }
 
-export default Coral_04
+export default Sea_03

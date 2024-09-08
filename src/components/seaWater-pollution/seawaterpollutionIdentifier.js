@@ -149,10 +149,10 @@ function PollutionPredictor() {
                                 display: 'flex',
                             }}
                         >
-                            Please Enter the date to check the
+                            Please Enter the measurements to check the
                         </Typography>
                         <Typography sx={{ fontWeight: 'bold', fontSize: '2rem', color: "white" }}>
-                            "Coral Health"
+                            "Seawater Pollution"
                         </Typography>
                     </Grid>
 

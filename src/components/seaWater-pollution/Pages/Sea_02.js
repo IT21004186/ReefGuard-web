@@ -1,10 +1,10 @@
 import React from 'react'
-import Image1 from '../Images/coral7.jpg'
+import Image1 from '../Images/coral5.jpg'
 import { Box, Grid, Typography  } from '@mui/material'
-// import AllCoral from '../Component/AllCoral'
 import HealthForm from '../HealthForm'
 
-function Coral_03() {
+
+function Sea_02() {
     return (
         <Box sx={{ display: 'flex', width: '100%' }}>
             <Box sx={{ width: '100%', margin: 'auto', height: '100%' }}>
@@ -17,19 +17,13 @@ function Coral_03() {
                     </Grid>
                     <Grid item xs={12} sm={8} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <Box sx={{ width: '100%', textAlign: 'left' }}>
-                            <Typography variant="body1" sx={{ fontSize: '1.6rem', mt: 1, fontWeight: 'bold' ,  fontStyle: 'italic' }}>
-                                Coral 03
+                            <Typography variant="body1" sx={{ fontSize: '1.6rem', mt: 1, fontWeight: 'bold',  fontStyle: 'italic' }}>
+                            Plastic Pollution
                             </Typography>
                         </Box>
                         <Box sx={{ width: '100%', textAlign: 'left', mt: 1 }}>
                             <Typography variant="body1" sx={{ fontSize: '1.1rem' ,fontFamily: "'Playfair Display', serif" }}>
-                                Globally, ocean warming due to climate change is a rapidly growing threat.
-                                The zooxanthellae within corals’ tissues are sensitive to ocean temperature,
-                                and ocean warming can cause the corals to expel their colorful algae — a process
-                                known as “coral bleaching.” This leaves behind the appearance of a bright white skeleton
-                                and deprives the polyps of an important source of nutrition. The corals eventually die
-                                if the symbiotic algae don’t return, if there is inadequate time between bleaching for
-                                corals to recover or if other threats impede their recovery.
+                            Plastic pollution has become a growing concern, especially in the form of microplastics, which are tiny plastic fragments that are ingested by marine organisms. Larger pieces of plastic, like bottles and fishing nets, entangle wildlife and break down into smaller particles over time. These plastics not only disrupt marine ecosystems but can also enter the human food chain through seafood consumption. With millions of tons of plastic entering the ocean each year, this type of pollution has a lasting environmental impact.
                             </Typography>
                         </Box>
                     </Grid>
@@ -43,4 +37,4 @@ function Coral_03() {
     )
 }
 
-export default Coral_03
+export default Sea_02

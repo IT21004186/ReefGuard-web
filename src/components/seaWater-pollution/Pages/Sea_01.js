@@ -1,10 +1,10 @@
 import React from 'react'
-import Image1 from '../Images/coral5.jpg'
+import Image1 from '../Images/coral3.jpg'
 import { Box, Grid, Typography  } from '@mui/material'
 import HealthForm from '../HealthForm'
 
 
-function Coral_02() {
+function Sea_01() {
     return (
         <Box sx={{ display: 'flex', width: '100%' }}>
             <Box sx={{ width: '100%', margin: 'auto', height: '100%' }}>
@@ -18,24 +18,18 @@ function Coral_02() {
                     <Grid item xs={12} sm={8} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <Box sx={{ width: '100%', textAlign: 'left' }}>
                             <Typography variant="body1" sx={{ fontSize: '1.6rem', mt: 1, fontWeight: 'bold',  fontStyle: 'italic' }}>
-                                Coral 02
+                            Oil Spills
                             </Typography>
                         </Box>
-                        <Box sx={{ width: '100%', textAlign: 'left', mt: 1 }}>
+                        <Box sx={{ width: '100%', textAlign: 'left', mt: 2 }}>
                             <Typography variant="body1" sx={{ fontSize: '1.1rem' ,fontFamily: "'Playfair Display', serif" }}>
-                                Globally, ocean warming due to climate change is a rapidly growing threat.
-                                The zooxanthellae within corals’ tissues are sensitive to ocean temperature,
-                                and ocean warming can cause the corals to expel their colorful algae — a process
-                                known as “coral bleaching.” This leaves behind the appearance of a bright white skeleton
-                                and deprives the polyps of an important source of nutrition. The corals eventually die
-                                if the symbiotic algae don’t return, if there is inadequate time between bleaching for
-                                corals to recover or if other threats impede their recovery.
+                            Oil spills occur when large quantities of oil are accidentally released into the ocean, often due to tanker accidents, offshore drilling mishaps, or pipeline leaks. These spills are devastating to marine life as oil coats the fur or feathers of sea animals, reducing their insulation abilities and leading to hypothermia or death. Oil slicks on the water's surface also block sunlight from reaching marine plants, which disrupts photosynthesis. Cleanup efforts are often slow and complex, making oil spills one of the most harmful types of seawater pollution.
                             </Typography>
                         </Box>
                     </Grid>
 
                 </Grid>
-                <Grid container spacing={5} sx={{ my: 5, width: "94%", mx: "3%" }}>
+                <Grid container spacing={0} sx={{ mt: 5, width: "94%", mx: "3%" }}>
                     <HealthForm />
                 </Grid>
             </Box>
@@ -43,4 +37,4 @@ function Coral_02() {
     )
 }
 
-export default Coral_02
+export default Sea_01

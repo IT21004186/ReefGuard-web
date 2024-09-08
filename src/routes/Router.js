@@ -23,6 +23,7 @@ const Profile = lazy(() => import("../components/profile/profile.js"));
 const DiseaseIdentifier = lazy(() => import("../components/disease-identification/diseaseIdentifier.js"));
 const CoralIdentification = lazy(() => import("../components/coral-identification/coralIdentification.js"));
 const PollutionPredictor = lazy(() => import("../components/seaWater-pollution/seawaterpollutionIdentifier.js"));
+const seawaterpollutionIdentifier = lazy(() => import("../components/seaWater-pollution/seawaterpollutionIdentifier.js"));
 const CoralLifeExpectancyPrediction = lazy(() => import("../components/coral-lifeExpectancy/coralLifeExpectancyPrediction.js"));
 const Facts = lazy(() => import("../components/coral-lifeExpectancy/Pages/Facts.js"));
 const CoralBleech = lazy(() => import("../components/coral-lifeExpectancy/Pages/CoralBleech.js"));
@@ -34,6 +35,12 @@ const Coral_01  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Co
 const Coral_02  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Coral_02.js"));
 const Coral_03  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Coral_03.js"));
 const Coral_04  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Coral_04.js"));
+
+/***** Sea Routes ****/
+const Sea_01  = lazy(() => import("../components/seaWater-pollution/Pages/Sea_01.js"));
+const Sea_02  = lazy(() => import("../components/seaWater-pollution/Pages/Sea_02.js"));
+const Sea_03  = lazy(() => import("../components/seaWater-pollution/Pages/Sea_03.js"));
+const Sea_04  = lazy(() => import("../components/seaWater-pollution/Pages/Sea_04.js"));
 
 /*****Routes******/
 
@@ -57,6 +64,7 @@ const ThemeRoutes = [
       { path: "newSpeciesPage", exact: true, element: <NewSpeciesPage /> },
       { path: "diseaseIdentifier", exact: true, element: <DiseaseIdentifier /> },
       { path: "coralLifeExpectancyPrediction", exact: true, element: <CoralLifeExpectancyPrediction /> },
+      { path: "seawaterpollutionIdentifier", exact: true, element: <seawaterpollutionIdentifier /> },
       { path: "facts", exact: true, element: <Facts /> },
       { path: "CoralBleaching", exact: true, element: <CoralBleech /> },
       { path: "MoreFacts", exact: true, element: <MoreFacts /> },
@@ -66,6 +74,12 @@ const ThemeRoutes = [
             { path: "Coral_02", exact: true, element: <Coral_02 /> }, // New route for Coral 02
             { path: "Coral_03", exact: true, element: <Coral_03 /> }, // New route for Coral 03
             { path: "Coral_04", exact: true, element: <Coral_04 /> }, // New route for Coral 04
+
+            // sea routes
+            { path: "Sea_01", exact: true, element: <Sea_01 /> }, // New route for Sea_01
+            { path: "Sea_02", exact: true, element: <Sea_02 /> }, // New route for Sea_02
+            { path: "Sea_03", exact: true, element: <Sea_03 /> }, // New route for Sea_03
+            { path: "Sea_04", exact: true, element: <Sea_04 /> }, // New route for Sea_04
 
 
 

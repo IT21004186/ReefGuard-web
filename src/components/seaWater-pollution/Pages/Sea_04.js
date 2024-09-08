@@ -1,10 +1,9 @@
 import React from 'react'
-import Image1 from '../Images/coral3.jpg'
+import Image1 from '../Images/coral9.jpg'
 import { Box, Grid, Typography  } from '@mui/material'
 import HealthForm from '../HealthForm'
 
-
-function Coral_01() {
+function Sea_04() {
     return (
         <Box sx={{ display: 'flex', width: '100%' }}>
             <Box sx={{ width: '100%', margin: 'auto', height: '100%' }}>
@@ -18,17 +17,12 @@ function Coral_01() {
                     <Grid item xs={12} sm={8} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <Box sx={{ width: '100%', textAlign: 'left' }}>
                             <Typography variant="body1" sx={{ fontSize: '1.6rem', mt: 1, fontWeight: 'bold',  fontStyle: 'italic' }}>
-                                MADREPORA OCULATA
+                            Agricultural Runoff
                             </Typography>
                         </Box>
-                        <Box sx={{ width: '100%', textAlign: 'left', mt: 2 }}>
+                        <Box sx={{ width: '100%', textAlign: 'left', mt: 1 }}>
                             <Typography variant="body1" sx={{ fontSize: '1.1rem' ,fontFamily: "'Playfair Display', serif" }}>
-                            *Madrepora oculata* is a species of stony coral commonly found in deep waters, particularly in the 
-                            Indian and Pacific Oceans. It belongs to the family Oculinidae and is known for its branching structure
-                            and white to pale pink coloration. This coral species forms complex reef structures, providing habitats
-                            or various marine life, and thrives in cold-water environments, often at depths between 200 and 1,000 meters.
-                            Despite being a deep-sea coral, *Madrepora oculata* contributes to marine biodiversity and plays a significant 
-                            role in the ecosystem.
+                            Agricultural runoff, which contains pesticides, fertilizers, and animal waste, is another major contributor to seawater pollution. When rain washes these chemicals into rivers and oceans, it causes nutrient pollution, leading to algae blooms and dead zones where oxygen levels are too low to support life. These blooms can also release toxins that are harmful to both marine life and humans. Managing agricultural practices and reducing the use of harmful chemicals are essential to minimizing this form of pollution.
                             </Typography>
                         </Box>
                     </Grid>
@@ -42,4 +36,4 @@ function Coral_01() {
     )
 }
 
-export default Coral_01
+export default Sea_04

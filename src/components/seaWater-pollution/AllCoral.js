@@ -10,10 +10,10 @@ import Image3 from './Images/coral7.jpg';
 import Image4 from './Images/coral9.jpg';
 
 const images = [
-    { src: Image1, name: 'Coral 1', next: "Coral_01" },
-    { src: Image2, name: 'Coral 2', next: "Coral_02" },
-    { src: Image3, name: 'Coral 3', next: "Coral_03" },
-    { src: Image4, name: 'Coral 4', next: "Coral_04" },
+    { src: Image1, name: 'Oil Spills', next: "Sea_01" },
+    { src: Image2, name: 'Plastic Pollution', next: "Sea_02" },
+    { src: Image3, name: 'Chemical Contaminants', next: "Sea_03" },
+    { src: Image4, name: 'Agricultural Runoff', next: "Sea_04" },
 ];
 
 function AllCoral() {
@@ -69,6 +69,12 @@ function AllCoral() {
                         }}
                     />
                 </Grid>
+
+                <Box sx={{ width: '100%', textAlign: 'center', mt: 1 }}>
+                            <Typography variant="body1" sx={{ font:"bold", fontSize: '1.9rem' ,fontFamily: "'Playfair Display', serif" , color:"black" }}>
+                            Seawater Pollution can be divided into Four Main Categories
+                            </Typography>
+                </Box>
 
                 {/* Image Grid */}
                 <Grid container spacing={3} sx={{ my: 5, width: "94%", mx: "3%" }}>
