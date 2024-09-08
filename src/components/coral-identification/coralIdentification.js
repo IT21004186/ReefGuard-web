@@ -500,7 +500,7 @@ function ExploreCoralSpecies() {
       title: "Understand Coral Ecosystems",
       description:
         "Gain insights into coral ecosystems, their roles in marine environments, and why protecting them is vital for our planet’s health.",
-      link: "#",
+      link: "/CoralTable",
     },
     {
       title: "Support Coral Conservation",
