@@ -3,16 +3,14 @@
   /* padding: 20px; */
   font-family: Arial, sans-serif;
 }
-  
+
 .upload-box {
   margin: 20px auto;
   width: 80%;
   max-width: 600px;
   text-align: center;
-  
-
 }
-  
+
 .upload-area {
   border: 2px dashed #ccc;
   padding: 30px;
@@ -28,12 +26,12 @@
   text-align: center;
   background-color: #d6ffe691;
 }
-  
+
 .upload-area p {
   margin-bottom: 20px;
   color: #494949;
 }
-  
+
 .upload-btn {
   padding: 10px 20px;
   background-color: #007bff;
@@ -42,11 +40,11 @@
   border-radius: 5px;
   cursor: pointer;
 }
-  
+
 .upload-btn:hover {
   background-color: #0056b3;
 }
-  
+
 .explore-coral-species {
   display: flex;
   justify-content: space-around;
@@ -60,12 +58,16 @@
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-image: url('../images/corals/aboutcorals-bg.jpg');
+  background-image: url("../images/corals/aboutcorals-bg.jpg");
   background-size: cover;
   background-position: center;
   height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
 }
-  
+
 /* .coral-section-1 {
   flex: 1;
   margin: 0 10px;
@@ -78,37 +80,37 @@
   background-position: center;
 } */
 
-
-  
 .coral-section h3 {
   color: #bcdbff;
   margin-bottom: 10px;
   font-weight: bold;
 }
-  
+
 .coral-section p {
   color: #bebebe;
   margin-bottom: 20px;
 }
-  
+
 .learn-more-btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+  background-color: rgb(0, 153, 255);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   border-radius: 5px;
+  font-weight: bold;
+  border-radius: 10px;
+
 }
-  
+
 .learn-more-btn:hover {
-  background-color: #0056b3;
+  background-color: #fcfcfc;
+  color: #292929;
 }
-
-
 
 /* banner section */
 .banner-section-1 {
-  background-image: url('../images/corals/coral-banner.jpg');
+  background-image: url("../images/corals/coral-banner.jpg");
   background-size: cover;
   background-position: center;
   padding: 95px;
@@ -117,32 +119,76 @@
   font-size: 36px;
   font-weight: bolder;
   border-radius: 8px;
- 
 }
 
 /* section-1 */
-.section-1{
+.section-1 {
   background-color: rgb(216, 226, 230);
   padding: 15px;
   margin: 50px;
   border-radius: 6px;
-  background-image: url('../images/corals/section-1-bg.jpg');
+  background-image: url("../images/corals/section-1-bg.jpg");
   background-size: cover;
   background-position: center;
 }
 
-
-.cancel-btn{
-  opacity: 0;   /* Makes the button invisible */
+.cancel-btn {
+  opacity: 0;
+  /* Makes the button invisible */
   pointer-events: auto;
   position: absolute;
   right: 350px;
   height: 40px;
   cursor: default !important;
- 
 }
 
-.upload-btn-section{
+
+.upload-btn{
+  font-weight: bold;
+}
+
+.upload-btn:hover{
+  background-color: #fff;
+  color: #292929;
+  font-weight: bold;
+
+}
+
+.upload-btn-section {
   display: flex;
   justify-content: center;
+}
+
+.rules-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #bcdbff;
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
+.rules-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.rules-set-paragraph {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.rules-section ul {
+  text-align: start;
+  justify-content: center;
+  margin-bottom: 50px;
+  color: #292929;
+}
+
+
+.result-section{
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
