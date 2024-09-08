@@ -91,7 +91,7 @@ function PollutionPredictor() {
                     >
                         <DetailCard
                             title="Card 1"
-                            description="In Sri Lanka, an island nation in the Indian Ocean, there are many varieties of coral reefs that are vital to the marine environment"
+                            description="In Sri Lanka, an island nation in the Indian Ocean, sea water pollution has become a serious threat to the marine environment..."
                             linktoNext="/facts"
                             button="More Facts"
                             onClick={() => navigate("/facts")}
@@ -111,7 +111,7 @@ function PollutionPredictor() {
 
                         }}
                     >
-                        <ImageCard title="What is Coral bleaching?" linktoNext="CoralBleaching" />
+                        <ImageCard title="What is Sea Water Pollution?" linktoNext="CoralBleaching" />
                     </Grid>
 
 

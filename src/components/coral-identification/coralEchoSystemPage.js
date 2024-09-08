@@ -2,7 +2,7 @@ import React from "react";
 
 function coralEchoSystemPage(){
   return (
-    <div>Coral Life Expectancy Predictor</div>
+    <div>Sea Water Pollution Identification</div>
   );
 }
 

@@ -3,10 +3,10 @@ import Slider from 'react-slick';
 import { Box , Typography } from '@mui/material';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Image1 from "./Images/coral1.jpg";
-import Image2 from "./Images/coral2.jpg";
-import Image3 from "./Images/coral6.jpg";
-import Image4 from "./Images/coral8.jpg";
+import Image1 from "./Images/images1.jpg";
+import Image2 from "./Images/images2.jpg";
+import Image3 from "./Images/images6.jpg";
+import Image4 from "./Images/images8.jpg";
 
 
 const images = [Image1,Image2,Image3,Image4];
@@ -46,7 +46,7 @@ const ImageSlider = () => {
                 }}
             >
                 <Typography variant="h2" component="h2"  sx={{ fontFamily: "'Playfair Display', serif",  fontSize: '2.5rem' }} >
-                    Coral Life Expectancy & Extinct Level Prediction
+                    Sea Water Level Identification
                 </Typography>
             </Box>
         </div>

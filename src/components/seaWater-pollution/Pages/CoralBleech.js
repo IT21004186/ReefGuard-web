@@ -105,7 +105,7 @@ function CoralBleech() {
                     using it to produce food in a process known as photosynthesis." />
             </Grid>
             <Grid container spacing={3} sx={{ my: 1, width: "94%", mx: "3%" }}>
-              <FAQ question="What is coral bleaching?"
+              <FAQ question="What is Sea Water Pollution?"
                 answer="When corals are stressed, they expel the zooxanthellae that live inside 
                     their tissues. Without the algae to provide colour, corals appear 
                     transparent and reveal their white skeletons. This is called coral 
