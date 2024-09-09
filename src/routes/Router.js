@@ -29,6 +29,8 @@ const Facts = lazy(() => import("../components/coral-lifeExpectancy/Pages/Facts.
 const CoralBleech = lazy(() => import("../components/coral-lifeExpectancy/Pages/CoralBleech.js"));
 const MoreFacts = lazy(() => import("../components/coral-lifeExpectancy/Pages/MoreFacts.js"));
 const NewSpeciesPage = lazy(() => import("../components/coral-identification/newSpeciesPage.js"));
+const SeaFacts = lazy(() => import("../components/seaWater-pollution/Pages/SeaFacts.js"));
+const MoreSeaFacts = lazy(() => import("../components/seaWater-pollution/Pages/MoreSeaFacts.js"));
 
 /***** Coral Routes ****/
 const Coral_01  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Coral_01.js"));
@@ -68,6 +70,8 @@ const ThemeRoutes = [
       { path: "facts", exact: true, element: <Facts /> },
       { path: "CoralBleaching", exact: true, element: <CoralBleech /> },
       { path: "MoreFacts", exact: true, element: <MoreFacts /> },
+      { path: "MoreSeaFacts", exact: true, element: <MoreSeaFacts /> },
+      { path: "seafacts", exact: true, element: <SeaFacts /> },
       
             // Coral-specific routes
             { path: "Coral_01", exact: true, element: <Coral_01 /> }, // New route for Coral 01

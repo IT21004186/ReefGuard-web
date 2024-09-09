@@ -68,7 +68,8 @@ function PollutionPredictor() {
                 console.log(data);
                 // Ensure the data is in the expected format
                 // setPredicted(data.data.Predicted-Situation ? data.data.Predicted-Situation.toFixed(2) : 'N/A');
-                setPredicted(data.data["Predicted Situation"] ? data.data["Predicted Situation"] : 'N/A');    
+                // setPredicted(data.data["Predicted Situation"] ? data.data["Predicted Situation"] : 'N/A');
+                setPredicted(data.data["Predicted Situation:"] ? data.data["Predicted Situation:"] : 'N/A');    
             } else {
                 console.error('Failed to fetch coral health data.');
                 setPredicted('Error fetching data');
