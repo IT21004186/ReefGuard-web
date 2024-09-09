@@ -29,8 +29,8 @@ const Facts = lazy(() => import("../components/coral-lifeExpectancy/Pages/Facts.
 const CoralBleech = lazy(() => import("../components/coral-lifeExpectancy/Pages/CoralBleech.js"));
 const MoreFacts = lazy(() => import("../components/coral-lifeExpectancy/Pages/MoreFacts.js"));
 const NewSpeciesPage = lazy(() => import("../components/coral-identification/newSpeciesPage.js"));
-const SeaFacts = lazy(() => import("../components/seaWater-pollution/Pages/SeaFacts.js"));
-const MoreSeaFacts = lazy(() => import("../components/seaWater-pollution/Pages/MoreSeaFacts.js"));
+const SeaFacts = lazy(() => import("../components/seaWater-pollution/SeaFacts.js"));
+const MoreSeaFacts = lazy(() => import("../components/seaWater-pollution/MoreSeaFacts.js"));
 
 /***** Coral Routes ****/
 const Coral_01  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Coral_01.js"));
