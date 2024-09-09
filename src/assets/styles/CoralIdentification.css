@@ -134,12 +134,12 @@
 
 .cancel-btn {
   opacity: 0;
-  /* Makes the button invisible */
   pointer-events: auto;
   position: absolute;
   right: 350px;
   height: 40px;
   cursor: default !important;
+  width: 200px;
 }
 
 
@@ -162,12 +162,13 @@
 .rules-section {
   display: flex;
   flex-direction: column;
-  background-color: #bcdbff;
+  /* background-color: #bcdbff; */
   margin-top: 30px;
+  background: linear-gradient(135deg, #e4f0ff 0%, #a0c1ff 100%);
   border-radius: 8px;
 }
 
-.rules-section h2 {
+.rules-section h3 {
   text-align: center;
   margin-bottom: 30px;
   margin-top: 50px;
@@ -181,12 +182,17 @@
 }
 
 .rules-section ul {
+  font-family:'Times New Roman', Times, serif;
   text-align: start;
   justify-content: center;
   margin-bottom: 50px;
   color: #292929;
 }
 
+.rules-section  p{
+  font-family:'Times New Roman', Times, serif;
+  color: #494949;
+}
 
 .result-section{
   margin-top: 100px;
