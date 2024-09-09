@@ -28,9 +28,8 @@ const MoreFacts = lazy(() => import("../components/coral-lifeExpectancy/Pages/Mo
 const NewSpeciesPage = lazy(() => import("../components/coral-identification/newSpeciesPage.js"));
 const StagHornCoralPage = lazy(() => import("../components/coral-identification/stagHornCoralPage.js")); // Capitalized
 const PoritesCoralPage = lazy(() => import("../components/coral-identification/poritesCoralPage.js"));
+const DiseaseTable = lazy(() => import("../components/disease-identification/diseaseIdentifiedTable.js"));
 const CoralTable = lazy(() => import("../components/coral-identification/storedCoralDataTable.js"));
-
-
 
 /***** Coral Routes ****/
 const Coral_01  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Coral_01.js"));
@@ -64,6 +63,7 @@ const ThemeRoutes = [
       { path: "facts", exact: true, element: <Facts /> },
       { path: "CoralBleaching", exact: true, element: <CoralBleech /> },
       { path: "MoreFacts", exact: true, element: <MoreFacts /> },
+      { path: "diseaseTable", exact: true, element: <DiseaseTable /> },
       { path: "CoralTable", exact: true, element: <CoralTable /> },
       
             // Coral-specific routes
