@@ -13,6 +13,7 @@ import { withStyles } from '@mui/styles';
 import { db } from '../firebase';
 import { useNavigate } from 'react-router-dom';
 import '../../assets/styles/diseaseIdentifiedTable.css';
+import RecordDialog from './diseaseRecord';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -46,7 +47,9 @@ function DiseaseTable() {
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(5);
     const [rows, setRows] = useState([]);
-    const navigate = useNavigate(); // for navigation
+    const [selectedRow, setSelectedRow] = useState(null);
+    const [dialogOpen, setDialogOpen] = useState(false);
+    const navigate = useNavigate();
 
     // Fetch Firestore data
     useEffect(() => {
@@ -79,15 +82,24 @@ function DiseaseTable() {
         setPage(0);
     };
 
-    // Handle navigation to DiseaseIdentifier
     const handleNavigateToAdd = () => {
         navigate('/diseaseIdentifier');
+    };
+
+    // Handle row click to open dialog with selected row data
+    const handleRowClick = (row) => {
+        setSelectedRow(row);
+        setDialogOpen(true);
+    };
+
+    const handleCloseDialog = () => {
+        setDialogOpen(false);
     };
 
     return (
         <div>
             <div className="title-button-container">
-                <h2 className="table-title">Coral Disease Identifitaction</h2>
+                <h2 className="table-title">Coral Disease Identification</h2>
                 <button className="add-button" onClick={handleNavigateToAdd}>
                     Add
                 </button>
@@ -114,7 +126,13 @@ function DiseaseTable() {
                       .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                       .map((row, index) => {
                         return (
-                          <StyledTableRow hover role="checkbox" tabIndex={-1} key={index}>
+                          <StyledTableRow 
+                            hover 
+                            role="checkbox" 
+                            tabIndex={-1} 
+                            key={index} 
+                            onClick={() => handleRowClick(row)}
+                          >
                             {columns.map((column) => {
                               const value = row[column.id];
                               return (
@@ -143,6 +161,14 @@ function DiseaseTable() {
                 onRowsPerPageChange={handleChangeRowsPerPage}
               />
             </Paper>
+
+            {selectedRow && (
+              <RecordDialog
+                open={dialogOpen}
+                handleClose={handleCloseDialog}
+                rowData={selectedRow}
+              />
+            )}
         </div>
     );
 }
