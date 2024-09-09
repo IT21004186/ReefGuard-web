@@ -9,9 +9,11 @@ import DetailCard from './DetailCard';
 import ImageCard from './ImageCard';
 
 function PollutionPredictor() {
-    const [year, setYear] = useState('');
-    const [month, setMonth] = useState('');
-    const [day, setDay] = useState('');
+    const [tempsterss, setTempsterss] = useState('');
+    const [bleachrisk, setBleachrisk] = useState('');
+    const [salstress, setSalstress] = useState('');
+    const [clasireduc, setClasireduc] = useState('');
+    const [clasistress, setClasistress] = useState('');
     const [predicted, setPredicted] = useState('');  
     const [errors, setErrors] = useState({});
 
@@ -19,15 +21,20 @@ function PollutionPredictor() {
 
     const validateForm = () => {
         const newErrors = {};
-        const currentYear = new Date().getFullYear();
-        if (!year || isNaN(year) || year.length !== 4) {
-            newErrors.year = 'Please enter a valid year with exactly 4 digits';
+        if (!tempsterss || isNaN(tempsterss) || tempsterss.length !== 4) {
+            //newErrors.tempsterss = 'Please enter a valid tempsterss with exactly 4 digits';
         }        
-        if (!month || isNaN(month) || month < 1 || month > 12) {
-            newErrors.month = 'Please enter a valid month (1-12)';
+        if (!bleachrisk || isNaN(bleachrisk) || bleachrisk < 1 || bleachrisk > 12) {
+            //newErrors.bleachrisk = 'Please enter a valid bleachrisk (1-12)';
         }
-        if (!day || isNaN(day) || day < 1 || day > 31) {
-            newErrors.day = 'Please enter a valid day (1-31)';
+        if (!salstress || isNaN(salstress) || salstress < 1 || salstress > 31) {
+            //newErrors.salstress = 'Please enter a valid salstress (1-31)';
+        }
+        if (!clasireduc || isNaN(clasireduc) || clasireduc < 1 || clasireduc > 31) {
+            //newErrors.clasireduc = 'Please enter a valid clasireduc (1-31)';
+        }
+        if (!clasistress || isNaN(clasistress) || clasistress < 1 || clasistress > 31) {
+            //newErrors.clasistress = 'Please enter a valid clasistress (1-31)';
         }
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -41,15 +48,17 @@ function PollutionPredictor() {
         }
 
         try {
-            const response = await fetch('https://coral-precent-fxf2bbhwbyhmd8h2.eastus-01.azurewebsites.net/predict', {
+            const response = await fetch('https://situation-cjghg2cvb9eyg6b3.eastus-01.azurewebsites.net/predict', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    YYYY: parseInt(year),
-                    MM: parseInt(month),
-                    DD: parseInt(day),
+                    tempsterss: parseInt(tempsterss),
+                    bleachrisk: parseInt(bleachrisk),
+                    salstress: parseInt(salstress),
+                    clasireduc: parseInt(clasireduc),
+                    clasistress: parseInt(clasistress),
                 }),
             });
 
@@ -58,7 +67,8 @@ function PollutionPredictor() {
                 console.log("Hello");
                 console.log(data);
                 // Ensure the data is in the expected format
-                setPredicted(data.data.predicted ? data.data.predicted.toFixed(2) : 'N/A');  
+                // setPredicted(data.data.Predicted-Situation ? data.data.Predicted-Situation.toFixed(2) : 'N/A');
+                setPredicted(data.data["Predicted Situation"] ? data.data["Predicted Situation"] : 'N/A');    
             } else {
                 console.error('Failed to fetch coral health data.');
                 setPredicted('Error fetching data');
@@ -92,9 +102,9 @@ function PollutionPredictor() {
                         <DetailCard
                             title="Card 1"
                             description="In Sri Lanka, an island nation in the Indian Ocean, sea water pollution has become a serious threat to the marine environment..."
-                            linktoNext="/facts"
-                            button="More Facts"
-                            onClick={() => navigate("/facts")}
+                            linktoNext="/seafacts"
+                            button="More SeaFacts"
+                            onClick={() => navigate("/seafacts")}
                         />
                     </Grid>
 
@@ -130,9 +140,9 @@ function PollutionPredictor() {
                         <DetailCard
                             title="Card 3"
                             description="Worldwide, coral reefs are in danger because of a number of issues, most especially issues such as sea water pollution."
-                            linktoNext="/MoreFacts"
+                            linktoNext="/MoreSeaFacts"
                             button="Read More"
-                            onClick={() => navigate("/MoreFacts")}
+                            onClick={() => navigate("/MoreSeaFacts")}
                         />
                     </Grid>
                 </Grid>
@@ -158,11 +168,11 @@ function PollutionPredictor() {
 
                     <Grid item xs={12} sm={6} sx={{ backgroundColor: grey[300] }}>
 
-
+                        {/* temp */}
                         <Box component="form" noValidate autoComplete="off" onSubmit={handleSubmit}>
                             <Grid container spacing={2} alignItems="center">
                                 <Grid item xs={4}>
-                                    <Typography sx={{ fontWeight: 'bold', fontSize: "1rem" }}>Year</Typography>
+                                    <Typography sx={{ fontWeight: 'bold', fontSize: "1rem" }}>Tempreture Sterss</Typography>
                                 </Grid>
                                 <Grid item xs={8}>
                                     <TextField
@@ -170,13 +180,13 @@ function PollutionPredictor() {
                                         variant="outlined"
                                         type="number"
                                         size="small"
-                                        value={year}
+                                        value={tempsterss}
                                         onChange={(e) => {
-                                            setYear(e.target.value);
-                                            setErrors((prev) => ({ ...prev, year: '' })); // Clear error on change
+                                            setTempsterss(e.target.value);
+                                            setErrors((prev) => ({ ...prev, tempsterss: '' })); // Clear error on change
                                         }}
-                                        error={!!errors.year}
-                                        helperText={errors.year}
+                                        error={!!errors.tempsterss}
+                                        helperText={errors.tempsterss}
                                         sx={{
                                             width: "50%",
                                             backgroundColor: 'white',
@@ -193,8 +203,10 @@ function PollutionPredictor() {
                                         }}
                                     />
                                 </Grid>
+
+                                {/* bleach */}
                                 <Grid item xs={4}>
-                                    <Typography sx={{ fontWeight: 'bold', fontSize: "1rem" }}>Month</Typography>
+                                    <Typography sx={{ fontWeight: 'bold', fontSize: "1rem" }}>Bleaching Risk</Typography>
                                 </Grid>
                                 <Grid item xs={8}>
                                     <TextField
@@ -202,13 +214,13 @@ function PollutionPredictor() {
                                         variant="outlined"
                                         type="number"
                                         size="small"
-                                        value={month}
+                                        value={bleachrisk}
                                         onChange={(e) => {
-                                            setMonth(e.target.value);
-                                            setErrors((prev) => ({ ...prev, month: '' })); // Clear error on change
+                                            setBleachrisk(e.target.value);
+                                            setErrors((prev) => ({ ...prev, bleachrisk: '' })); // Clear error on change
                                         }}
-                                        error={!!errors.month}
-                                        helperText={errors.month}
+                                        error={!!errors.bleachrisk}
+                                        helperText={errors.bleachrisk}
                                         sx={{
                                             width: "50%",
                                             backgroundColor: 'white',
@@ -225,8 +237,10 @@ function PollutionPredictor() {
                                         }}
                                     />
                                 </Grid>
+
+                                {/* salinity */}
                                 <Grid item xs={4}>
-                                    <Typography sx={{ fontWeight: 'bold', fontSize: "1rem" }}>Day</Typography>
+                                    <Typography sx={{ fontWeight: 'bold', fontSize: "1rem" }}>Salinity Stress</Typography>
                                 </Grid>
                                 <Grid item xs={8}>
                                     <TextField
@@ -234,14 +248,81 @@ function PollutionPredictor() {
                                         variant="outlined"
                                         type="number"
                                         size="small"
-                                        value={day}
-                                        // onChange={(e) => setDay(e.target.value)}
+                                        value={salstress}
                                         onChange={(e) => {
-                                            setDay(e.target.value);
-                                            setErrors((prev) => ({ ...prev, day: '' })); // Clear error on change
+                                            setSalstress(e.target.value);
+                                            setErrors((prev) => ({ ...prev, salstress: '' })); // Clear error on change
                                         }}
-                                        error={!!errors.day}
-                                        helperText={errors.day}
+                                        error={!!errors.salstress}
+                                        helperText={errors.salstress}
+                                        sx={{
+                                            width: "50%",
+                                            backgroundColor: 'white',
+                                            '& .MuiOutlinedInput-root': {
+                                                backgroundColor: 'white',
+                                                borderRadius: '0',
+                                                '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                                    borderColor: 'black',
+                                                },
+                                            },
+                                            '& .MuiOutlinedInput-notchedOutline': {
+                                                borderRadius: '0',
+                                            },
+                                        }}
+                                    />
+                                </Grid>
+
+                                {/* clasireduc */}
+                                <Grid item xs={4}>
+                                    <Typography sx={{ fontWeight: 'bold', fontSize: "1rem" }}>Clasification Reduction</Typography>
+                                </Grid>
+                                <Grid item xs={8}>
+                                    <TextField
+                                        fullWidth
+                                        variant="outlined"
+                                        type="number"
+                                        size="small"
+                                        value={clasireduc}
+                                        onChange={(e) => {
+                                            setClasireduc(e.target.value);
+                                            setErrors((prev) => ({ ...prev, clasireduc: '' })); // Clear error on change
+                                        }}
+                                        error={!!errors.clasireduc}
+                                        helperText={errors.clasireduc}
+                                        sx={{
+                                            width: "50%",
+                                            backgroundColor: 'white',
+                                            '& .MuiOutlinedInput-root': {
+                                                backgroundColor: 'white',
+                                                borderRadius: '0',
+                                                '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                                    borderColor: 'black',
+                                                },
+                                            },
+                                            '& .MuiOutlinedInput-notchedOutline': {
+                                                borderRadius: '0',
+                                            },
+                                        }}
+                                    />
+                                </Grid>
+
+                                {/* clasistress */}
+                                <Grid item xs={4}>
+                                    <Typography sx={{ fontWeight: 'bold', fontSize: "1rem" }}>Clasification Stress</Typography>
+                                </Grid>
+                                <Grid item xs={8}>
+                                    <TextField
+                                        fullWidth
+                                        variant="outlined"
+                                        type="number"
+                                        size="small"
+                                        value={clasistress}
+                                        onChange={(e) => {
+                                            setClasistress(e.target.value);
+                                            setErrors((prev) => ({ ...prev, clasistress: '' })); // Clear error on change
+                                        }}
+                                        error={!!errors.clasistress}
+                                        helperText={errors.clasistress}
                                         sx={{
                                             width: "50%",
                                             backgroundColor: 'white',
@@ -284,7 +365,7 @@ function PollutionPredictor() {
                                 {predicted && (
                                     <Grid item xs={12} sx={{ mb: 3 }}>
                                         <Typography sx={{ fontWeight: 'bold', fontSize: '1.5rem' }}>
-                                            Coral Health Percentage: {predicted}%
+                                            Asstimated Pollution Level : {predicted}
                                         </Typography>
                                     </Grid>
                                 )}
