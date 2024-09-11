@@ -64,16 +64,6 @@ function CoralIdentification() {
     setLoading(false);
   };
 
-  // Cancel identification
-  // const handleCancelIdentification = () => {
-  //   setLoading(false);
-
-  //   setTimeout(() => {
-  //     setCancelled(true);
-  //     setShowImageAfterCancel(true);
-  //     setErrorMessage("No corals detected.");
-  //   }, 5000);
-  // };
 
   const handleCancelIdentification = () => {
     console.log("Cancel initiated");
@@ -279,9 +269,9 @@ function ExploreCoralSpecies() {
       link: "/newSpeciesPage",
     },
     {
-      title: "Understand Coral Ecosystems",
+      title: "Gathered Coral Data",
       description:
-        "Gain insights into coral ecosystems, their roles in marine environments, and why protecting them is vital for our planet’s health.",
+        "Capturing the diversity of Sri Lankan coral species through underwater photography, contributing to a localized dataset essential for conservation efforts.",
       link: "/CoralTable",
     },
     {
