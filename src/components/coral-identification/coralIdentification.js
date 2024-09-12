@@ -64,6 +64,16 @@ function CoralIdentification() {
     setLoading(false);
   };
 
+  // Cancel identification
+  // const handleCancelIdentification = () => {
+  //   setLoading(false);
+
+  //   setTimeout(() => {
+  //     setCancelled(true);
+  //     setShowImageAfterCancel(true);
+  //     setErrorMessage("No corals detected.");
+  //   }, 5000);
+  // };
 
   const handleCancelIdentification = () => {
     console.log("Cancel initiated");
@@ -278,7 +288,7 @@ function ExploreCoralSpecies() {
       title: "Support Coral Conservation",
       description:
         "Join global efforts in coral conservation by contributing your data and supporting initiatives that protect these vital marine organisms.",
-      link: "#",
+      link: "/CoralConservation",
     },
   ];
 
