@@ -28,14 +28,22 @@ const MoreFacts = lazy(() => import("../components/coral-lifeExpectancy/Pages/Mo
 const NewSpeciesPage = lazy(() => import("../components/coral-identification/newSpeciesPage.js"));
 const StagHornCoralPage = lazy(() => import("../components/coral-identification/stagHornCoralPage.js")); // Capitalized
 const PoritesCoralPage = lazy(() => import("../components/coral-identification/poritesCoralPage.js"));
-
-
+const DiseaseTable = lazy(() => import("../components/disease-identification/diseaseIdentifiedTable.js"));
+const CoralTable = lazy(() => import("../components/coral-identification/storedCoralDataTable.js"));
+const SeaFacts = lazy(() => import("../components/seaWater-pollution/Pages/SeaFacts.js"));
+const MoreSeaFacts = lazy(() => import("../components/seaWater-pollution/Pages/MoreSeaFacts.js"));
 
 /***** Coral Routes ****/
 const Coral_01  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Coral_01.js"));
 const Coral_02  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Coral_02.js"));
 const Coral_03  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Coral_03.js"));
 const Coral_04  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Coral_04.js"));
+
+/***** Sea Routes ****/
+const Sea_01  = lazy(() => import("../components/seaWater-pollution/Pages/Sea_01.js"));
+const Sea_02  = lazy(() => import("../components/seaWater-pollution/Pages/Sea_02.js"));
+const Sea_03  = lazy(() => import("../components/seaWater-pollution/Pages/Sea_03.js"));
+const Sea_04  = lazy(() => import("../components/seaWater-pollution/Pages/Sea_04.js"));
 
 /*****Routes******/
 const ThemeRoutes = [
@@ -63,12 +71,22 @@ const ThemeRoutes = [
       { path: "facts", exact: true, element: <Facts /> },
       { path: "CoralBleaching", exact: true, element: <CoralBleech /> },
       { path: "MoreFacts", exact: true, element: <MoreFacts /> },
+      { path: "diseaseTable", exact: true, element: <DiseaseTable /> },
+      { path: "CoralTable", exact: true, element: <CoralTable /> },
+      { path: "seafacts", exact: true, element: <SeaFacts /> },
+      { path: "MoreSeaFacts", exact: true, element: <MoreSeaFacts /> },
       
             // Coral-specific routes
             { path: "Coral_01", exact: true, element: <Coral_01 /> }, // New route for Coral 01
             { path: "Coral_02", exact: true, element: <Coral_02 /> }, // New route for Coral 02
             { path: "Coral_03", exact: true, element: <Coral_03 /> }, // New route for Coral 03
             { path: "Coral_04", exact: true, element: <Coral_04 /> }, // New route for Coral 04
+
+            // sea routes
+            { path: "Sea_01", exact: true, element: <Sea_01 /> }, // New route for Sea_01
+            { path: "Sea_02", exact: true, element: <Sea_02 /> }, // New route for Sea_02
+            { path: "Sea_03", exact: true, element: <Sea_03 /> }, // New route for Sea_03
+            { path: "Sea_04", exact: true, element: <Sea_04 /> }, // New route for Sea_04
 
 
 

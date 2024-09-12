@@ -1,0 +1,31 @@
+.title-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Style for the title */
+.table-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Add button styling */
+.add-button {
+    background-color: #1976d2; /* Material UI primary blue */
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #115293; /* Darker shade on hover */
+}

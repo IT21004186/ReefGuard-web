@@ -12,7 +12,6 @@ function DiseaseIdentifier() {
     const [file, setFile] = useState(null);
     const [prediction, setPrediction] = useState(null);
     const [userDetails, setUserDetails] = useState(null);
-    console.log("user Data:", userDetails);
     const [user, setUser] = useState(null);
 
     // Get the authenticated user
@@ -85,8 +84,11 @@ function DiseaseIdentifier() {
     };
 
     return (
+    <>
+        <div className="disease-banner-section-1">
+            <h1 style={{ fontWeight: "bold" }}>Coral Disease Identification</h1>
+        </div>
         <div className="disease-identify-container">
-            <h2 className="disease-identify-header">Coral Disease Identification</h2>
             <p className="disease-identify-description">
                 Upload an image of coral to determine whether it is healthy or affected by diseases such as white band, red band, or yellow band disease.
                 Our advanced AI model, powered by Vision Transformer, offers highly accurate coral disease identification to assist researchers, divers, and enthusiasts.
@@ -111,6 +113,7 @@ function DiseaseIdentifier() {
                 </div>
             )}
         </div>
+    </>
     );
 }
 
