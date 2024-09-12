@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect, useState} from "react";
+import { auth, db } from "../components/firebase";
+import { doc, getDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import {
   Navbar,
   Collapse,
   Nav,
-  // NavItem,
   NavbarBrand,
-  // UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
@@ -15,11 +16,14 @@ import {
 } from "reactstrap";
 import Logo from "./Logo";
 import { ReactComponent as LogoWhite } from "../assets/images/logos/adminprowhite.svg";
-import user1 from "../assets/images/users/user4.jpg";
+import '../assets/styles/userProfile/DropdownMenu.css';
+import user5 from "../assets/images/users/user5.jpg";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const [dropdownOpen, setDropdownOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [userDetails, setUserDetails] = useState(null);
+  const navigate = useNavigate();
 
   const toggle = () => setDropdownOpen((prevState) => !prevState);
   const Handletoggle = () => {
@@ -27,6 +31,34 @@ const Header = () => {
   };
   const showMobilemenu = () => {
     document.getElementById("sidebarArea").classList.toggle("showSidebar");
+  };
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      auth.onAuthStateChanged(async (user) => {
+        if (user) {
+          const docRef = doc(db, "Users", user.uid);
+          const docSnap = await getDoc(docRef);
+            if (docSnap.exists()) {
+              setUserDetails(docSnap.data());
+            } else {
+              console.log("User data not found");
+            }
+        } else {
+            console.log("User is not logged in");
+        }
+      });
+    };
+      fetchUserData();
+  }, []);
+
+  const handleLogout = async () => {
+    try {
+      await auth.signOut();
+      navigate("/login");
+    } catch (error) {
+      console.error("Error logging out:", error.message);
+    }
   };
 
   return (
@@ -37,7 +69,7 @@ const Header = () => {
         top: 0,
         width: "100%",
         zIndex: 1000,
-        paddingBottom: '10px'
+        paddingBottom: "10px",
       }}
       light
       expand="md"
@@ -77,23 +109,36 @@ const Header = () => {
         <Nav className="me-auto" navbar>
           {/* Add your navigation links here */}
         </Nav>
-        <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+        <Dropdown isOpen={dropdownOpen} toggle={toggle} className="custom-dropdown">
           <DropdownToggle color="transparent">
             <img
-              src={user1}
+              src={userDetails?.photo || user5}
               alt="profile"
               className="rounded-circle"
-              width="30"
+              width="35"
             />
           </DropdownToggle>
-          <DropdownMenu>
-            <DropdownItem header>Info</DropdownItem>
-            <DropdownItem tag={Link} to="/profile">My Account</DropdownItem>
+          <DropdownMenu className="custom-dropdown-menu">
+            <div className="dropdown-header">
+              <img
+                src={userDetails?.photo || user5}
+                alt="profile-avatar"
+                className="rounded-circle"
+                width="45"
+              />
+              <span className="dropdown-username">{userDetails?.firstName}</span>
+            </div>
+            <DropdownItem divider />
+            <DropdownItem tag={Link} to="/profile">
+              My Account
+            </DropdownItem>
             <DropdownItem>Edit Profile</DropdownItem>
             <DropdownItem divider />
             <DropdownItem>My Balance</DropdownItem>
             <DropdownItem>Inbox</DropdownItem>
-            <DropdownItem>Logout</DropdownItem>
+            <DropdownItem id="dropdownItem-logout-btn" onClick={handleLogout}>
+              Logout
+            </DropdownItem>
           </DropdownMenu>
         </Dropdown>
       </Collapse>
