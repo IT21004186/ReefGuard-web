@@ -279,16 +279,16 @@ function ExploreCoralSpecies() {
       link: "/newSpeciesPage",
     },
     {
-      title: "Understand Coral Ecosystems",
+      title: "Gathered Coral Data",
       description:
-        "Gain insights into coral ecosystems, their roles in marine environments, and why protecting them is vital for our planet’s health.",
+        "Capturing the diversity of Sri Lankan coral species through underwater photography, contributing to a localized dataset essential for conservation efforts.",
       link: "/CoralTable",
     },
     {
       title: "Support Coral Conservation",
       description:
         "Join global efforts in coral conservation by contributing your data and supporting initiatives that protect these vital marine organisms.",
-      link: "#",
+      link: "/CoralConservation",
     },
   ];
 

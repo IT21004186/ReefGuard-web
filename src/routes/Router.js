@@ -32,6 +32,7 @@ const DiseaseTable = lazy(() => import("../components/disease-identification/dis
 const CoralTable = lazy(() => import("../components/coral-identification/storedCoralDataTable.js"));
 const SeaFacts = lazy(() => import("../components/seaWater-pollution/Pages/SeaFacts.js"));
 const MoreSeaFacts = lazy(() => import("../components/seaWater-pollution/Pages/MoreSeaFacts.js"));
+const CoralConservation = lazy(() => import("../components/coral-identification/CoralConservation.js"));
 
 /***** Coral Routes ****/
 const Coral_01  = lazy(() => import("../components/coral-lifeExpectancy/Pages/Coral_01.js"));
@@ -75,6 +76,7 @@ const ThemeRoutes = [
       { path: "CoralTable", exact: true, element: <CoralTable /> },
       { path: "seafacts", exact: true, element: <SeaFacts /> },
       { path: "MoreSeaFacts", exact: true, element: <MoreSeaFacts /> },
+      { path: "CoralConservation", exact: true, element: <CoralConservation /> },
       
             // Coral-specific routes
             { path: "Coral_01", exact: true, element: <Coral_01 /> }, // New route for Coral 01
