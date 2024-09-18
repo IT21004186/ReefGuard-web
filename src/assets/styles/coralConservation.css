@@ -1,0 +1,113 @@
+/* General styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+.header {
+    background-color: #007B8D;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .nav-links a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.user-icon {
+    color: white;
+    font-size: 18px;
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+}
+
+/* Stats section */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #F7F7F7;
+    text-align: center;
+}
+
+.stat-item h2 {
+    color: #E74C3C;
+    font-size: 2.5rem;
+}
+
+/* Information section */
+.information {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+}
+
+.info-box {
+    width: 30%;
+    text-align: center;
+}
+
+.info-box img {
+    width: 100%;
+    height: auto;
+}
+
+/* Call to action section */
+.call-to-action {
+    text-align: center;
+    padding: 40px;
+    background-color: #EAF6F6;
+}
+
+.call-to-action h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #007B8D;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    padding: 5px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
