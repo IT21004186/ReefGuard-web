@@ -75,7 +75,7 @@ const SalesChart = () => {
       <CardBody>
         <CardTitle tag="h5">Extent of Coral Damage</CardTitle>
         <CardSubtitle className="text-muted" tag="h6">
-          Yearly Sales Report
+          Yearly Stats 
         </CardSubtitle>
         <div className="bg-primary text-white my-3 p-3 rounded">
           <Row>
