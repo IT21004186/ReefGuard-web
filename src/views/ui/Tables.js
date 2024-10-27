@@ -1,4 +1,5 @@
 import ProjectTables from "../../components/dashboard/ProjectTable";
+import Feeds from "../../components/dashboard/Feeds";
 import { Row, Col, Table, Card, CardTitle, CardBody } from "reactstrap";
 
 const Tables = () => {
@@ -9,6 +10,7 @@ const Tables = () => {
       {/* --------------------------------------------------------------------------------*/}
       <Col lg="12">
         <ProjectTables />
+        <Feeds />
       </Col>
       {/* --------------------------------------------------------------------------------*/}
       {/* table-2*/}
