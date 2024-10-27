@@ -46,7 +46,7 @@ const ImageSlider = () => {
                 }}
             >
                 <Typography variant="h2" component="h2"  sx={{ fontFamily: "'Playfair Display', serif",  fontSize: '2.5rem' }} >
-                    Sea Water Level Identification
+                    Sea Water pollution Level Identification
                 </Typography>
             </Box>
         </div>

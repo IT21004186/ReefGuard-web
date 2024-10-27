@@ -1,4 +1,5 @@
 import { Card, CardBody, CardSubtitle, CardTitle, Row, Col } from "reactstrap";
+import Feeds from "./Feeds";
 import Chart from "react-apexcharts";
 
 const SalesChart = () => {
@@ -75,7 +76,7 @@ const SalesChart = () => {
       <CardBody>
         <CardTitle tag="h5">Extent of Coral Damage</CardTitle>
         <CardSubtitle className="text-muted" tag="h6">
-          Yearly Sales Report
+          Yearly Stats 
         </CardSubtitle>
         <div className="bg-primary text-white my-3 p-3 rounded">
           <Row>
@@ -99,6 +100,7 @@ const SalesChart = () => {
         </div>
         <Chart options={options} series={series} type="area" height="279" />
       </CardBody>
+      <Feeds />
     </Card>
   );
 };

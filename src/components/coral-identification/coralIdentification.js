@@ -207,13 +207,14 @@ function CoralIdentification() {
               Drag and drop or click to upload your coral image. Our system will
               analyze it and provide you with detailed information about the
               coral species.
-              <input
+              
+            </p>
+            <input
                 type="file"
                 accept="image/*"
                 className="upload-box"
                 onChange={handleFileChange}
               />
-            </p>
           </div>
         </div>
 

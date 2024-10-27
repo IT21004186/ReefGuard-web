@@ -85,3 +85,26 @@
 // };
 
 // export default Feeds;
+
+import { padding } from '@mui/system';
+import React from 'react';
+import { Card, CardBody, CardTitle } from 'reactstrap';
+
+const Feeds = () => {
+  return (
+    <Card>
+      <CardBody>
+        <CardTitle style={{ paddingBottom: "15px", fontWeight: "800"}} tag="h5">Coral Wetlands Map in Sri Lanka</CardTitle>
+        <iframe
+          src="https://www.scribblemaps.com/maps/view/Coral-wetlands-in-Sri-Lanka/Ysmi0JlYwt"
+          width="100%"
+          height="500px"
+          style={{ border: 'none' }}
+          title="Coral Wetlands Map"
+        ></iframe>
+      </CardBody>
+    </Card>
+  );
+};
+
+export default Feeds;

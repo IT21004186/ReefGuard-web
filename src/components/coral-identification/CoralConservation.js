@@ -1,5 +1,5 @@
-import React from 'react';
-import '../../assets/styles/coralConservation.css'; // Reference to the CSS file
+import React from "react";
+import "../../assets/styles/coralConservation.css"; // Reference to the CSS file
 
 const CoralConservation = () => {
   return (
@@ -18,10 +18,10 @@ const CoralConservation = () => {
 
       {/* Hero Section */}
       <section className="hero">
-        <img src="coral-reef-hero.jpg" alt="Coral Reef" className="hero-image" />
-        <div className="hero-text">
-          <h1>Preserving Coral Reefs: A Lifeline for Marine Life and Coastal Communities</h1>
-        </div>
+        <h1>
+          Preserving Coral Reefs: A Lifeline for Marine Life and Coastal
+          Communities
+        </h1>
       </section>
 
       {/* Stats Section */}
@@ -47,43 +47,70 @@ const CoralConservation = () => {
       {/* Information Section */}
       <section className="information">
         <div className="info-box">
-          <img src="coral-reef1.jpg" alt="Coral Reefs" />
-          <p>Coral reefs support around 25% of all marine life, providing essential habitat for fish and other species.</p>
+          <img src={require("../../assets/images/corals/ecological-importance.jpg")} alt="Coral Reefs" />
+          <p>
+            Coral reefs support around 25% of all marine life, providing
+            essential habitat for fish and other species.
+          </p>
         </div>
         <div className="info-box">
-          <img src="divers.jpg" alt="Divers" />
-          <p>Over 500 million people rely on coral reefs for tourism, and protection from coastal erosion.</p>
+          <img src={require("../../assets/images/corals/ecological-importance.jpg")} alt="Divers" />
+          <p>
+            Over 500 million people rely on coral reefs for tourism, and
+            protection from coastal erosion.
+          </p>
         </div>
         <div className="info-box">
-          <img src="coral-reef2.jpg" alt="Coral Reefs" />
-          <p>Coral reefs provide goods and services valued at $375 billion annually, benefiting industries.</p>
+          <img src={require("../../assets/images/corals/ecological-importance.jpg")} alt="Coral Reefs" />
+          <p>
+            Coral reefs provide goods and services valued at $375 billion
+            annually, benefiting industries.
+          </p>
         </div>
       </section>
 
       {/* Call to Action Section */}
-      <section className="call-to-action">
+      <section className="call-to-action" loading="lazy">
         <h2>Together, We Can Protect Coral Reefs for Future Generations</h2>
         <p>
-          The future of coral reefs depends on the actions we take today. Through innovative solutions, collective responsibility, and a shared commitment to conservation, we can safeguard these vital ecosystems and ensure they continue to thrive for generations to come. Join us in making a difference.
+          The future of coral reefs depends on the actions we take today.
+          Through innovative solutions, collective responsibility, and a shared
+          commitment to conservation, we can safeguard these vital ecosystems
+          and ensure they continue to thrive for generations to come. Join us in
+          making a difference.
         </p>
       </section>
 
       {/* Footer Section */}
-      <footer>
+      <footer >
         <div className="footer-content">
-          <div className="sitemap">
-            <h3>SITEMAP</h3>
-            <ul>
-              <li><a href="#">Home</a></li>
+          {/* <img className="footer-img" ></img> */}
+          <div className="sitemap d-flex">
+            <h4 className="col-4 flex-start">ReefGuard</h4>
+            <ul className="col-4 flex-start">
+              <li>
+                <a href="#">Home</a>
+              </li>
+            </ul>
+            <ul className="col-4 flex-start">
+              <li>
+                <a href="#">Coral Identification</a>
+              </li>
             </ul>
           </div>
-          <div className="resources">
+          {/* <div className="resources">
             <h3>RESOURCES</h3>
             <ul>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="mailto:banukeysapol@gmail.com">Contact us at banukeysapol@gmail.com</a></li>
+              <li>
+                <a href="#">FAQ</a>
+              </li>
+              <li>
+                <a href="mailto:banukeysapol@gmail.com">
+                  Contact us at banukeysapol@gmail.com
+                </a>
+              </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </footer>
     </div>

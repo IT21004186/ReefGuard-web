@@ -1,4 +1,10 @@
 /* General styling */
+.coral-conservation-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the page takes full height of the viewport */
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -27,12 +33,33 @@ body {
 /* Hero section */
 .hero {
     position: relative;
+    background-image: url("../images/corals/coral-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 95px;
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    font-weight: bolder;
+    border-radius: 8px;
 }
 
-.hero-image {
-    width: 100%;
-    height: auto;
+.hero h1 {
+    font-weight: bolder;
 }
+
+
+/* .hero-image  {
+    background-image: url("../images/corals/coral-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 95px;
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    font-weight: bolder;
+    border-radius: 8px;
+} */
 
 .hero-text {
     position: absolute;
@@ -54,11 +81,22 @@ body {
     padding: 20px;
     background-color: #F7F7F7;
     text-align: center;
+    margin-top: 100px;
 }
+
+.stat-item {
+    border: 2px dotted rgba(238, 94, 22, 0.281);
+    padding: 10px;
+    border-radius: 4px;
+    color: #007B8D;
+    font-weight: bold;
+}
+
 
 .stat-item h2 {
     color: #E74C3C;
     font-size: 2.5rem;
+    font-weight: bolder;
 }
 
 /* Information section */
@@ -71,11 +109,23 @@ body {
 .info-box {
     width: 30%;
     text-align: center;
+    background-color: rgb(215, 235, 253);
+    border-radius: 8px;
+    font-size: large;
+
 }
+
+.info-box p {
+    margin-top: 30px;
+    padding: 10px;
+    color: rgb(74, 73, 73);
+}
+
 
 .info-box img {
     width: 100%;
     height: auto;
+    border-radius: 4px;
 }
 
 /* Call to action section */
@@ -83,6 +133,7 @@ body {
     text-align: center;
     padding: 40px;
     background-color: #EAF6F6;
+    /* margin: 100px; */
 }
 
 .call-to-action h2 {
@@ -91,11 +142,36 @@ body {
 }
 
 /* Footer */
-footer {
-    background-color: #007B8D;
+/* footer {
+    
+    background-color: #f7f7f7;
     color: white;
     padding: 20px;
     text-align: center;
+    background-image: url("../images/corals/coral-bannerimg2.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 95px; */
+    /* text-align: center;
+    color: white;
+    font-size: 36px; */
+    /* font-weight: bolder;
+    border-radius: 8px;
+} */
+
+footer {
+    margin-top: auto; /* Pushes the footer to the bottom */
+    background-color: #f7f7f7;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    background-image: url("../images/corals/coral-bannerimg2.jpg");
+    background-size: cover;
+    background-position: center;
+    font-weight: bolder;
+    border-radius: 8px;
+    position: relative; /* Keep the footer within normal flow */
+    z-index: 1;
 }
 
 footer ul {
@@ -111,3 +187,5 @@ footer a {
     color: white;
     text-decoration: none;
 }
+
+
