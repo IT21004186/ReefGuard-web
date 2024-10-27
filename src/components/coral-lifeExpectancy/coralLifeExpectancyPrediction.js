@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { Box, Grid, Typography, TextField, Button } from '@mui/material';
+import { Box, Grid, Typography, TextField, Button, Alert, Stack } from '@mui/material';
 import ImageSlider from './ImageSlider';
 import { grey } from '@mui/material/colors';
 import AllCoral from './AllCoral';
 import DetailCard from './DetailCard';
 import ImageCard from './ImageCard';
+import emailjs from 'emailjs-com';
 
 function CoralLifeExpectancyPrediction() {
     const [year, setYear] = useState('');
@@ -14,6 +15,7 @@ function CoralLifeExpectancyPrediction() {
     const [day, setDay] = useState('');
     const [predicted, setPredicted] = useState('');  
     const [errors, setErrors] = useState({});
+    const [alert, setAlert] = useState({ show: false, severity: 'info', message: '' });
 
     const navigate = useNavigate();
 
@@ -36,30 +38,57 @@ function CoralLifeExpectancyPrediction() {
     const getHealthStatus = (predicted) => {
         let status = '';
         let color = '';
+        let severity = '';
         if (predicted <= 20) {
             status = 'No Stress';
             color = 'blue';
+            severity = 'success';
         } else if (predicted <= 40) {
             status = 'Watch';
             color = 'yellow';
+            severity = 'info';
         } else if (predicted <= 60) {
             status = 'Warning';
             color = 'orange';
+            severity = 'error';
         } else if (predicted <= 80) {
             status = 'Alert Level 1';
-            color = 'lightcoral'; // Light Red
+            color = 'lightcoral';
+            severity = 'error';
         } else {
             status = 'Alert Level 2';
-            color = 'red'; // Dark Red
+            color = 'red';
+            severity = 'error';
         }
-        return { status, color };
+        return { status, color, severity };
+    };
+
+    const sendEmailAlert = (status, predictedValue) => {
+        const emailParams = {
+            to_name: 'Sir/Madam',
+            message: `Status: ${status} - Coral Health Percentage: ${predictedValue}%`,
+        };
+
+        emailjs.send(
+            'service_hh4oh9b',
+            'template_jpt13lv',
+            emailParams,
+            'cxeYdtWwCP4N5_mtu'
+        ).then(
+            (response) => {
+                console.log('Email successfully sent!', response.status, response.text);
+            },
+            (error) => {
+                console.error('Failed to send email:', error);
+            }
+        );
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (!validateForm()) {
-            return; // Prevent form submission if there are validation errors
+            return;
         }
 
         try {
@@ -77,17 +106,31 @@ function CoralLifeExpectancyPrediction() {
 
             if (response.ok) {
                 const data = await response.json();
-                console.log("Hello");
-                console.log(data);
+                // console.log(data);
                 // Ensure the data is in the expected format
-                setPredicted(data.data.predicted ? data.data.predicted.toFixed(2) : 'N/A');  
+                // setPredicted(data.data.predicted ? data.data.predicted.toFixed(2) : 'N/A');
+                const predictedValue = data.data.predicted ? data.data.predicted.toFixed(2) : 'N/A';
+                setPredicted(predictedValue);
+                
+                const { status, severity } = getHealthStatus(predictedValue);
+                setAlert({
+                    show: true,
+                    severity: severity,
+                    message: `Status: ${status} - Coral Health Percentage: ${predictedValue}%`
+                });
+
+                if (severity === 'error') {
+                    sendEmailAlert(status, predictedValue);
+                }
             } else {
                 console.error('Failed to fetch coral health data.');
                 setPredicted('Error fetching data');
+                setAlert({ show: true, severity: 'error', message: 'Failed to fetch coral health data.' });
             }
         } catch (error) {
             console.error('Error:', error);
             setPredicted('Error fetching data');
+            setAlert({ show: true, severity: 'error', message: 'Error fetching data' });
         }
     };
 
@@ -96,6 +139,14 @@ function CoralLifeExpectancyPrediction() {
             <Box sx={{ width: '100%', margin: 'auto', height: '100%' }}>
 
                 <ImageSlider />
+
+                {alert.show && (
+                    <Stack sx={{ width: '100%', my: 2 }} spacing={2}>
+                        <Alert severity={alert.severity} variant="filled">
+                            {alert.message}
+                        </Alert>
+                    </Stack>
+                )}
 
                 <Grid container spacing={0} sx={{ mt: 3, width: "90%", mx: "0.1%" }}>
 
