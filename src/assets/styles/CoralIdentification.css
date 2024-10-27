@@ -9,6 +9,7 @@
   width: 80%;
   max-width: 600px;
   text-align: center;
+  
 }
 
 .upload-area {
@@ -17,6 +18,13 @@
   border-radius: 10px;
   text-align: center;
   background-color: #00000091;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    color: #2a2929;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
 }
 
 .output-area {
