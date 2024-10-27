@@ -1,7 +1,7 @@
 import React from 'react'
 import Image1 from '../Images/images27.jpg'
 import { Box, Grid, Typography  } from '@mui/material'
-import HealthForm from '../HealthForm'
+import PredictionForm from '../PredictionForm'
 
 function Sea_04() {
     return (
@@ -29,7 +29,7 @@ function Sea_04() {
 
                 </Grid>
                 <Grid container spacing={0} sx={{ mt: 5, width: "94%", mx: "3%" }}>
-                    {/* <HealthForm /> */}
+                    <PredictionForm />
                 </Grid>
             </Box>
         </Box>
