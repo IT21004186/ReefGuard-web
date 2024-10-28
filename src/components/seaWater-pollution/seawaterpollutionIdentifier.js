@@ -149,7 +149,7 @@ function PollutionPredictor() {
 
                 {/* Second grid with typography */}
                 <Grid container spacing={3} sx={{ my: 0.1, width: "90%", mx: "1%" }}>
-                    <Grid item xs={12} sm={6} sx={{ backgroundColor: "black", padding: 2 }}>
+                    <Grid item xs={12} sm={6} sx={{ backgroundColor: "black", padding: 2, backgroundColor:"#051e4f", borderRadius:"6px"}}>
                         <Typography
                             sx={{
                                 fontWeight: 'bold',

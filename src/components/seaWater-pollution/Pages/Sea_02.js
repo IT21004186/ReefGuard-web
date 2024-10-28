@@ -10,7 +10,7 @@ function Sea_02() {
             <Box sx={{ width: '100%', margin: 'auto', height: '100%' }}>
                 <Grid container spacing={0} sx={{ mt: 5, width: "94%", mx: "3%" }}>
                     <Grid item xs={12} sm={2} sx={{ display: 'flex', justifyContent: 'center' }}>
-                        <img src={Image1} alt="Coral Image 1" style={{ width: '100%', height: 'auto', maxHeight: '300px', objectFit: 'cover' }} />
+                        <img src={Image1} alt="Coral Image 1" style={{ width: '100%', height: 'auto', maxHeight: '300px', objectFit: 'cover',borderRadius:"4px" }} />
                     </Grid>
                     <Grid item xs={12} sm={1} sx={{ display: 'flex', justifyContent: 'center' }}>
 

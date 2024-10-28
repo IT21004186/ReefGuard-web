@@ -22,6 +22,7 @@ function Sea_01() {
                 height: "auto",
                 maxHeight: "300px",
                 objectFit: "cover",
+                borderRadius:"4px"
               }}
             />
           </Grid>
@@ -60,6 +61,7 @@ function Sea_01() {
                 sx={{
                   fontSize: "1.1rem",
                   fontFamily: "'Playfair Display', serif",
+                  color:"gray"
                 }}
               >
                 Oil spills occur when large quantities of oil are accidentally

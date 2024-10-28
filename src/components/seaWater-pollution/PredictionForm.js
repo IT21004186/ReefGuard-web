@@ -46,7 +46,13 @@ function PredictionForm() {
         <Box sx={{ display: 'flex', width: '100%' }}>
             <Container maxWidth="xl" disableGutters>
                 <Box sx={{ display: 'flex', flexDirection: 'column', width: "100%" }}>
-                    <Box sx={{ position: 'relative', width: '100%', height: 'auto', overflow: 'hidden', backgroundColor: blue[300] }}>
+                    <Box sx={{ position: 'relative', 
+    width: '100%', 
+    height: 'auto', 
+    overflow: 'hidden', 
+    backgroundImage: "linear-gradient(to right, #e4f0ff, #a0c1ff)", // Adjust colors as needed
+    padding: "10px",
+    borderRadius:"4px" }}>
                         <Grid container spacing={3} >
                             <Grid item xs={12} sm={5} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', my: 3 }}>
                                 <Box component="form" noValidate autoComplete="off">

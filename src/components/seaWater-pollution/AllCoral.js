@@ -1,5 +1,5 @@
 import React from 'react';
-import BackGround from './Images/bg.jpeg';
+// import BackGround from './Images/bg.jpeg';
 import { Box, TextField, InputAdornment, Grid, Typography } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
@@ -18,7 +18,7 @@ const images = [
 
 function AllCoral() {
     const style = {
-        backgroundImage: `url(${BackGround})`,
+        // backgroundImage: `url(${BackGround})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         width: '100%',
@@ -29,9 +29,9 @@ function AllCoral() {
 
     return (
         <div style={style}>
-            <Box sx={{ width: '100%', margin: 'auto', height: '100%' }}>
+            <Box sx={{ width: '100%', margin: 'auto', height: '100%', backgroundColor:"#8d9bb7", borderRadius:"6px" }}>
                 {/* Search Bar */}
-                <Grid container spacing={3} sx={{ my: 5, width: "94%", mx: "3%" }}>
+                <Grid container spacing={3} sx={{ my: 5, width: "94%", mx: "3%", }}>
                     <TextField
                         fullWidth
                         variant="outlined"
