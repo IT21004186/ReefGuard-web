@@ -27,62 +27,83 @@ const CoralConservation = () => {
       {/* Stats Section */}
       <section className="stats">
         <div className="stat-item">
-          <h2>25%</h2>
-          <p>of Marine Life Relies on Coral Reefs</p>
+          <h2>7%</h2>
+          <p>of Global Coral Reefs are in Sri Lanka.</p>
         </div>
         <div className="stat-item">
-          <h2>500</h2>
-          <p>Million People Depend on Coral Reefs</p>
+          <h2>2M</h2>
+          <p>Million Sri Lankans Depend on Coral Reefs.</p>
         </div>
         <div className="stat-item">
-          <h2>$375</h2>
-          <p>Billion in Annual Economic Value</p>
+          <h2>140M</h2>
+          <p>Million Annual Coral Reef Tourism Revenue.</p>
         </div>
         <div className="stat-item">
-          <h2>30</h2>
-          <p>Years of Coral Conservation</p>
+          <h2>5</h2>
+          <p>Years of Coral Restoration Efforts.</p>
         </div>
       </section>
 
       {/* Information Section */}
       <section className="information">
         <div className="info-box">
-          <img src={require("../../assets/images/corals/ecological-importance.jpg")} alt="Coral Reefs" />
+          <img
+            src={require("../../assets/images/corals/Marinelife-card-img-1.jpg")}
+            alt="Coral Reefs"
+          />
           <p>
-            Coral reefs support around 25% of all marine life, providing
-            essential habitat for fish and other species.
+            Sri Lanka’s coral reefs are home to over 200 species of coral,
+            supporting rich marine biodiversity and sustaining local fish
+            populations.
           </p>
         </div>
         <div className="info-box">
-          <img src={require("../../assets/images/corals/ecological-importance.jpg")} alt="Divers" />
+          <img
+            src={require("../../assets/images/corals/Marinelife-card-img-2.jpg")}
+            alt="Divers"
+          />
           <p>
-            Over 500 million people rely on coral reefs for tourism, and
-            protection from coastal erosion.
+            Coral reefs protect Sri Lanka’s coastline from erosion, safeguarding
+            communities, and minimizing storm damage to over 1,000 km of
+            shoreline.
           </p>
         </div>
         <div className="info-box">
-          <img src={require("../../assets/images/corals/ecological-importance.jpg")} alt="Coral Reefs" />
+          <img
+            src={require("../../assets/images/corals/Marinelife-card-img-3.jpg")}
+            alt="Coral Reefs"
+          />
           <p>
-            Coral reefs provide goods and services valued at $375 billion
-            annually, benefiting industries.
+            Tourism centered around coral reefs in Sri Lanka generates
+            approximately $140 million per year, providing crucial income for
+            local communities.
           </p>
         </div>
       </section>
 
       {/* Call to Action Section */}
       <section className="call-to-action" loading="lazy">
-        <h2>Together, We Can Protect Coral Reefs for Future Generations</h2>
-        <p>
+        <div className="d-flex half-section-para">
+       <div className="physical-characteristics-section  col-6">
+          <h2 style={{textAlign:"left"}}>Together, We Can Protect Coral Reefs for Future Generations</h2>
+          <p style={{textAlign:"left", width:"80%"}}>
           The future of coral reefs depends on the actions we take today.
           Through innovative solutions, collective responsibility, and a shared
           commitment to conservation, we can safeguard these vital ecosystems
           and ensure they continue to thrive for generations to come. Join us in
           making a difference.
-        </p>
+          </p>
+        </div>
+        <img className="col-6 Physical-img" style={{borderRadius:"8px"}}
+            src={require("../../assets/images/corals/group-kids-friends.jpg")}
+            alt="Physical Characteristics"
+          />
+       </div>
+        
       </section>
 
       {/* Footer Section */}
-      <footer >
+      <footer>
         <div className="footer-content">
           {/* <img className="footer-img" ></img> */}
           <div className="sitemap d-flex">
