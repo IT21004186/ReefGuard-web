@@ -48,7 +48,7 @@ function PollutionPredictor() {
         }
 
         try {
-            const response = await fetch('https://situation-cjghg2cvb9eyg6b3.eastus-01.azurewebsites.net/predict', {
+            const response = await fetch('https://situation.azurewebsites.net/predict', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
