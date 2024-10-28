@@ -1,13 +1,13 @@
 import React from 'react';
-import BackGround from './Images/images30.jpg';
+import BackGround from './Images/bg.jpeg';
 import { Box, TextField, InputAdornment, Grid, Typography } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
-import Image1 from './Images/images28.jpg';
-import Image2 from './Images/images29.jpg';
-import Image3 from './Images/images14.jpg';
-import Image4 from './Images/images27.jpg';
+import Image1 from './Images/sea-pollution (1).jpg';
+import Image2 from './Images/sea-pollution (7).jpg';
+import Image3 from './Images/chemical.jpg';
+import Image4 from './Images/marine-sewer-2.jpg';
 
 const images = [
     { src: Image1, name: 'Oil Spills', next: "Sea_01" },
