@@ -1,23 +1,33 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { Box, Grid, Typography, TextField, Button, Alert, Stack } from '@mui/material';
+import { Box, TextField, Alert, Stack } from '@mui/material';
 import ImageSlider from './ImageSlider';
 import { grey } from '@mui/material/colors';
 import AllCoral from './AllCoral';
 import DetailCard from './DetailCard';
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import ImageCard from './ImageCard';
+import coralImage1 from '../../assets/images/corals/coral-bleaching.jpg'
+import coralImage2 from '../../assets/images/corals/coral-island.jpg'
+import coralImage3 from '../../assets/images/corals/coral-island2.jpg'
 import emailjs from 'emailjs-com';
 
 function CoralLifeExpectancyPrediction() {
-    const [year, setYear] = useState('');
-    const [month, setMonth] = useState('');
-    const [day, setDay] = useState('');
-    const [predicted, setPredicted] = useState('');  
-    const [errors, setErrors] = useState({});
-    const [alert, setAlert] = useState({ show: false, severity: 'info', message: '' });
+const [year, setYear] = useState('');
+const [month, setMonth] = useState('');
+const [day, setDay] = useState('');
+const [predicted, setPredicted] = useState('');  
+const [errors, setErrors] = useState({});
+const [alert, setAlert] = useState({ show: false, severity: 'info', message: '' });
 
-    const navigate = useNavigate();
+const navigate = useNavigate();
 
     const validateForm = () => {
         const newErrors = {};
@@ -148,67 +158,99 @@ function CoralLifeExpectancyPrediction() {
                     </Stack>
                 )}
 
-                <Grid container spacing={0} sx={{ mt: 3, width: "90%", mx: "0.1%" }}>
-
-                    {/* First card */}
-                    <Grid
-                        item
-                        xs={12}
-                        sm={4}
-                        sx={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                            padding: 2, 
-                            maxWidth: "300px", 
-                        }}
-                    >
-                        <DetailCard
-                            title="Card 1"
-                            description="In Sri Lanka, an island nation in the Indian Ocean, there are many varieties of coral reefs that are vital to the marine environment"
-                            linktoNext="/facts"
-                            button="More Facts"
-                            onClick={() => navigate("/facts")}
-                        />
-                    </Grid>
-
-                    {/* Second card */}
-                    <Grid
-                        item
-                        xs={12}
-                        sm={4}
-                        sx={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                            padding: 2,
-                            maxWidth: "300px",
-
-                        }}
-                    >
-                        <ImageCard title="What is Coral bleaching?" linktoNext="CoralBleaching" />
-                    </Grid>
-
-
-                    {/* Third card */}
-                    <Grid
-                        item
-                        xs={12}
-                        sm={4}
-                        sx={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                            padding: 2,
-                            maxWidth: "300px",
-                        }}
-                    >
-                        <DetailCard
-                            title="Card 3"
-                            description="Worldwide, coral reefs are in danger because of a number of issues, most especially issues such as sea water pollution."
-                            linktoNext="/MoreFacts"
-                            button="Read More"
-                            onClick={() => navigate("/MoreFacts")}
-                        />
-                    </Grid>
-                </Grid>
+        <Grid container spacing={0} sx={{ mt: 3, width: "90%", mx: "0.1%" }}>
+            <Grid
+                item
+                xs={12}
+                sm={4}
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    padding: 2, 
+                    maxWidth: "300px", 
+                }}
+            >
+                <Card sx={{ maxWidth: 345 }}>
+                    <CardMedia
+                        sx={{ height: 140 }}
+                        image={coralImage2}
+                        title="Coral Bleaching"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            In Sri Lanka
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            In Sri Lanka, an island nation in the Indian Ocean, there are many varieties of coral reefs that are vital to the marine environment.
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <Button size="small" onClick={() => navigate("/facts")}>More Facts</Button>
+                    </CardActions>
+                </Card>
+            </Grid>
+            <Grid
+                item
+                xs={12}
+                sm={4}
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    padding: 2,
+                    maxWidth: "300px",
+                }}
+            >
+                <Card sx={{ maxWidth: 345 }}>
+                    <CardMedia
+                        sx={{ height: 140 }}
+                        image={coralImage1}
+                        title="Coral Bleaching"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            What is Coral Bleaching?
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                        Coral bleaching is when corals turn white because they lose the tiny algae that live inside them. 
+                        These algae give corals their color and food, so without them, corals become weak and can die.
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <Button size="small" onClick={() => navigate("/CoralBleaching")}>Read More</Button>
+                    </CardActions>
+                </Card>
+            </Grid>
+            <Grid
+                item
+                xs={12}
+                sm={4}
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    padding: 2,
+                    maxWidth: "300px",
+                }}
+            >
+                <Card sx={{ maxWidth: 345 }}>
+                    <CardMedia
+                        sx={{ height: 140 }}
+                        image={coralImage3}
+                        title="Coral Bleaching"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            Worldwide Threats to Coral Reefs
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            Worldwide, coral reefs are in danger because of a number of issues, most especially issues such as seawater pollution.
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <Button size="small" onClick={() => navigate("/MoreFacts")}>Read More</Button>
+                    </CardActions>
+                </Card>
+            </Grid>
+        </Grid>
 
                 {/* Second grid with typography */}
                 <Grid container spacing={3} sx={{ my: 0.1, width: "90%", mx: "1%" }}>
