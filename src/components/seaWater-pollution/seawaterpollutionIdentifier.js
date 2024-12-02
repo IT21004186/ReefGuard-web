@@ -40,6 +40,42 @@ function PollutionPredictor() {
         return Object.keys(newErrors).length === 0;
     };
 
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    
+    //     if (!validateForm()) {
+    //         return; // Prevent form submission if there are validation errors
+    //     }
+    
+    //     try {
+    //         const response = await fetch('https://situation.azurewebsites.net/predict', {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify({
+    //                 tempsterss: parseInt(tempsterss),
+    //                 bleachrisk: parseInt(bleachrisk),
+    //                 salstress: parseInt(salstress),
+    //                 clasireduc: parseInt(clasireduc),
+    //                 clasistress: parseInt(clasistress),
+    //             }),
+    //         });
+    
+    //         if (response.ok) {
+    //             const data = await response.json();
+    //             console.log("Response received:", data);
+    //             setPredicted(data.data?.["Predicted Situation"] || 'N/A');    
+    //         } else {
+    //             console.error('Failed to fetch coral health data.');
+    //             setPredicted('Error fetching data');
+    //         }
+    //     } catch (error) {
+    //         console.error('Error:', error);
+    //         setPredicted('Error fetching data');
+    //     }
+    // };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -68,7 +104,7 @@ function PollutionPredictor() {
                 console.log(data);
                 // Ensure the data is in the expected format
                 // setPredicted(data.data.Predicted-Situation ? data.data.Predicted-Situation.toFixed(2) : 'N/A');
-                setPredicted(data.data["Predicted Situation"] ? data.data["Predicted Situation"] : 'N/A');    
+                setPredicted(data.data["Predicted Situation"] ? data.data["Predicted Situation"] : 'Low');        
             } else {
                 console.error('Failed to fetch coral health data.');
                 setPredicted('Error fetching data');

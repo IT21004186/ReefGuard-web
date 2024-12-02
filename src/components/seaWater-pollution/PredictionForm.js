@@ -22,13 +22,17 @@ function PredictionForm() {
 
         try {
             console.log('Starting fetch request...');
-            const response = await fetch('https://coral-precent-fxf2bbhwbyhmd8h2.eastus-01.azurewebsites.net/v2/predict', {
+            const response = await fetch('https://coral-precent-fxf2bbhwbyhmd8h2.eastus-01.azurewebsites.net/predict', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
+                body: JSON.stringify({
+          
                 body: JSON.stringify(data),
+            }),
             });
+            console.log("New Respose:", response);
 
             const result = await response.json();
             console.log('Prediction result:', result);
@@ -122,7 +126,7 @@ function PredictionForm() {
                                     variant="outlined"
                                     size="small"
                                     type="text"
-                                    value={coralHealthPrediction}
+                                    value={`${coralHealthPrediction}%`}
                                     sx={{
                                         width: "60%",
                                         backgroundColor: 'white',
